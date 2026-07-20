@@ -1,17 +1,21 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Contacto from "../components/common/ContactForm.astro";
+import Nav_bar from "../components/common/Navbar.astro";
+import Footer from "../components/common/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="KoonolMX">
+	<Nav_bar />
+
+
+	<section class="w-full flex justify-center">
+		<div class="w-5/6 border border-blue-600 h-100">
+			<p class="text-principal">INICIO</p>
+		</div>
+	</section>
+
+
+	<Contacto />
+	<Footer />
+</MainLayout>
