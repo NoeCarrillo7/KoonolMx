@@ -1,0 +1,48 @@
+{
+    "title": "Soluciones de AUTOMA de control y sistemas de IA",
+    "description": "Equipamiento enfocado en la transición hacia la industria 4.0, optimización y estandarización de procesos bajo normativas internacionales.",
+    "brand": "",
+    "activeCategory": "automatizacion",
+    "products": [
+        {
+        "id": "sinamics",
+        "title": "Variadores SINAMICS",
+        "tag": "Variador de Frecuencia",
+        "description": "Variadores de velocidad Siemens diseñados para un control preciso de motores, optimización del consumo energético y alto rendimiento en procesos industriales.",
+        "image": "/assets/automatizacion/sinamics.png",
+        "featured": false
+        },
+        {
+        "id": "logo",
+        "title": "PLC Siemens LOGO!",
+        "tag": "Módulo Lógico",
+        "description": "Módulo lógico compacto e intuitivo ideal para la automatización de pequeñas tareas de control en aplicaciones industriales y de edificación.",
+        "image": "/assets/automatizacion/logo.png",
+        "featured": false
+        },
+        {
+        "id": "s7-1200",
+        "title": "PLC Siemens S7-1200",
+        "tag": "PLC",
+        "description": "Equipos que optimizan y automatizan procesos industriales mediante tecnologías de control, monitoreo e inteligencia aplicada.",
+        "image": "/assets/automatizacion/s7-1200.png",
+        "featured": false
+        },
+        {
+        "id": "hmi-siemens",
+        "title": "HMI Siemens",
+        "tag": "Panel de Operación",
+        "description": "Interfaces hombre-máquina de alta resolución para la visualización, monitoreo y operación eficiente de procesos industriales en tiempo real.",
+        "image": "/assets/automatizacion/hmi-siemens.png",
+        "featured": false
+        },
+        {
+        "id": "eye-beacon",
+        "title": "EYE Beacon",
+        "tag": "Sensor / Beacon",
+        "description": "Beacon Bluetooth compacto para la identificación, monitoreo ambiental y rastreo de activos en la cadena de suministro y logística industrial.",
+        "image": "/assets/automatizacion/eye-beacon.png",
+        "featured": false
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "title": "Soluciones de TELECOM y Conectividad",
+    "description": "Suministro de hardware avanzado para redes industriales, enlaces de datos robustos y conectividad crítica.",
+    "brand": "Teltonika Networks",
+    "activeCategory": "telecomunicaciones",
+    "products": [
+        {
+        "id": "rut241",
+        "title": "Router Industrial RUT241",
+        "tag": "Router",
+        "description": "El RUT241 es un router celular compacto de calidad industrial diseñado para una conectividad fiable y versátil en aplicaciones IoT e M2M.",
+        "image": "/assets/telecomunicaciones/rut241.png",
+        "featured": false
+        },
+        {
+        "id": "rut956",
+        "title": "Router Industrial RUT956",
+        "tag": "Router",
+        "description": "El RUT956 es un router celular industrial de alto rendimiento con dual SIM, interfaces serie (RS232/RS485), E/S y ubicación GNSS, ideal para aplicaciones de automatización e infraestructura crítica.",
+        "image": "/assets/telecomunicaciones/rut956.png",
+        "featured": false
+        },
+        {
+        "id": "rutx11",
+        "title": "Router Industrial RUTX11",
+        "tag": "Router",
+        "description": "El RUTX11 es un router celular Cat 6 de alto rendimiento con Wi-Fi AC de doble banda, puertos Gigabit Ethernet y soporte Dual SIM, diseñado para aplicaciones empresariales e industriales con alta demanda de ancho de banda.",
+        "image": "/assets/telecomunicaciones/rutx11.png",
+        "featured": false
+        },
+        {
+        "id": "tsw200",
+        "title": "Switch Industrial TSW200",
+        "tag": "Switch",
+        "description": "El TSW200 es un switch industrial no administrado de 8 puertos Gigabit Ethernet con soporte PoE+ y 2 puertos SFP, optimizado para proporcionar alimentación y conectividad de alta velocidad en redes industriales.",
+        "image": "/assets/telecomunicaciones/tsw200.png",
+        "featured": false
+        },
+        {
+        "id": "trb140",
+        "title": "Gateway TRB140",
+        "tag": "Gateway",
+        "description": "El TRB140 es una gateway celular LTE Cat 4 ultrapequeña y eficiente con interfaz Ethernet, diseñada para conectar un solo equipo final a la red de forma rápida, segura y directa en proyectos IoT.",
+        "image": "/assets/telecomunicaciones/trb140.png",
+        "featured": false
+        }
+    ]
+}

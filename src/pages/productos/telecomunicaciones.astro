@@ -1,0 +1,103 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Nav_bar from "../../components/common/Navbar.astro";
+import ContactForm from '../../components/common/ContactForm.astro';
+import Footer from "../../components/common/Footer.astro";
+import CategoryNav from '../../components/category/CategoryNav.astro';
+import ProductCard from '../../components/category/ProductCard.astro';
+
+import data from '../../data/telecomunicaciones.json';
+
+import hero_imagen from '../../assets/telecomunicaciones/hero-imagen.png'
+import logo_teltonika from '../../assets/telecomunicaciones/logo-teltonika.png'
+import elemento1 from '../../assets/elementos.png'
+---
+
+<MainLayout title="Telecomunicaciones y Conectividad | Koonol MX">
+    <Nav_bar />
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute left-0 top-80 md:top-400">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute left-0 top-650 md:top-150">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute right-0 top-100 md:top-350">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute right-0 top-595 md:top-50">
+
+
+    <main class="w-5/6 mx-auto  py-10">
+        
+        <!-- HERO -->
+        <section>
+            <div class="flex flex-col items-center md:items-start">
+                <span class="w-full text-center md:text-start text-sm md:text-xl font-semibold text-principal">Soluciones de</span>
+                <h1 class="text-5xl md:text-[17rem] font-semibold text-[#D7E6EB] tracking-tight leading-[0.75] ">TELECOM</h1>
+                <p class="w-full text-center md:text-end text-sm md:text-3xl font-semibold text-principal">y Conectividad</p>
+            </div>
+
+            <div class="flex flex-col justify-between items-center md:gap-15 md:flex-row mt-5 md:mt-0">
+                <div class="md:h-50 md:border-l-2 border-gray-300 flex flex-col items-center text-center md:pl-5 md:items-start">
+                    <!--Descripcion categoria -->
+                    <p class="text-textos text-xs md:text-lg font-medium text-center mb-6 md:text-start">
+                    {data.description}
+                    </p>
+
+                    <span class="text-principal text-sm md:text-lg font-medium max-w-md leading-relaxed mb-6">{data.brand}</span>
+                    
+                    <a
+                        href="#contacto"
+                        class="w-1/2 text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium py-3 rounded-full hover:bg-slate-800 transition-colors"
+                        >
+                        Contactanos
+                    </a>
+                </div>
+                <img src={hero_imagen.src} alt="Telecom Hardware" class="w-full mt-5 md:w-1/2 md:mt-0" />
+            </div>
+        </section>
+
+        <!-- Nav de categorias -->
+        <CategoryNav active={data.activeCategory as any} />
+
+        <!--Seccion de productos -->
+        <section class="my-16">
+            <div class="mb-8">
+                <h2 class="text-xl md:text-4xl font-semibold text-principal">Productos Destacados</h2>
+                <p class="text-xs md:text-base text-textos mt-4 text-justify md:text-left">
+                Soluciones diseñadas para garantizar una comunicación estable, segura y eficiente en entornos industriales y empresariales. 
+                Contamos con routers, gateways y equipos de conectividad que mantienen tus operaciones siempre conectadas.
+                </p>
+                <p class="text-xs md:text-base text-textos mt-5 text-justify md:text-left">También distribuimos gateways, antenas, accesorios y demás soluciones Teltonika.</p>
+            </div>
+
+            <!--CARDS de productos -->
+            <div class="container-cards flex flex-col md:flex-row gap-4 w-full h-auto md:h-[380px] items-stretch">
+                {data.products.map((product) => (
+                    <ProductCard 
+                        title={product.title}
+                        tag={product.tag}
+                        description={product.description}
+                        image={product.image}
+                        featured={product.featured}
+                    />
+                ))}
+            </div>
+        </section>
+
+        <!-- BANNER DE TELTONIKA -->
+        <section class="flex flex-col items-center gap-5 md:gap-2 ">
+            <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5">
+                Ponemos a tu disposición el catálogo global de TELTONIKA. Explora a detalle las especificaciones de sus productos, e inicia tu proceso de cotización y suministro directamente con nosotros.
+            </p>
+            <img src={logo_teltonika.src} alt="Teltonika Networks" class="md:h-40 object-contain" />
+            <a 
+                href="https://www.teltonika-networks.com/" 
+                class="inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full"
+            >
+                Consultar ahora
+            </a>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="my-16">
+            <ContactForm />
+        </section>
+    </main>
+
+    <Footer />
+</MainLayout>

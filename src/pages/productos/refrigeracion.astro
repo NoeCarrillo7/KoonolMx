@@ -1,0 +1,134 @@
+---
+import Nav_bar from "../../components/common/Navbar.astro";
+
+import CategoryNav from '../../components/category/CategoryNav.astro';
+import ProductCard from '../../components/category/ProductCard.astro';
+import ContactForm from '../../components/common/ContactForm.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+import data from '../../data/refrigeracion.json';
+
+import hero_imagen from '../../assets/refrigeracion/hero-imagen.png';
+
+---
+
+<MainLayout title="Refrigeración | Koonol MX">
+    <Nav_bar />
+
+
+    <main class="w-5/6 mx-auto  py-10">
+        
+        <!-- HERO -->
+        <section>
+            <div class="flex flex-col items-center md:items-start">
+                <span class="w-full text-center md:text-start text-sm md:text-xl font-semibold text-principal">Soluciones de</span>
+                <h1 class="text-5xl md:text-[17rem] font-semibold text-[#D7E6EB] tracking-tight leading-[0.75]">REFRIGER</h1>
+                <p class="w-full text-center md:text-end text-sm md:text-3xl font-semibold text-principal">Industrial y Cocción Especializada</p>
+            </div>
+
+            <div class="flex flex-col justify-between items-center md:gap-15 md:flex-row mt-5 md:mt-0">
+                <div class="md:h-50 md:border-l-2 border-gray-300 flex flex-col items-center text-center md:pl-5 md:items-start">
+                    <!--Descripcion categoria -->
+                    <p class="text-textos text-xs md:text-lg font-medium text-center mb-6 md:text-start">
+                    {data.description}
+                    </p>
+
+                    <span class="text-principal text-sm md:text-lg font-medium max-w-md leading-relaxed mb-6">{data.brand}</span>
+                    
+                    <a
+                        href="#contacto"
+                        class="w-1/2 text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium py-3 rounded-full hover:bg-slate-800 transition-colors"
+                        >
+                        Contactanos
+                    </a>
+                </div>
+                <img src={hero_imagen.src} alt="Telecom Hardware" class="w-full mt-5 md:w-1/2 md:mt-0" />
+            </div>
+        </section>
+
+        <!-- Nav de categorias -->
+        <CategoryNav active={data.activeCategory as any} />
+
+
+        <section class="my-16">
+            <div class="mb-8">
+                <h2 class="text-xl md:text-4xl font-semibold text-principal">Soluciones IMPAFRI E INTARCON</h2>
+                <p class="text-xs md:text-base text-textos mt-4">
+                    Soluciones modulares desmontables de alta densidad y aislamiento térmico optimizado. Diseñadas para una conservación eficiente, 
+                    montaje rápido y adaptabilidad a espacios críticos en sectores comercial, hotelero e industrial.
+                </p>
+            </div>
+
+            <!--CARDS de productos -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                {data.products.map((product) => (
+                <ProductCard 
+                    title={product.title}
+                    tag={product.tag}
+                    description={product.description}
+                    image={product.image}
+                    featured={product.featured}
+                />
+                ))}
+            </div>
+        </section>
+
+        <section class="bg-slate-50 rounded-2xl p-8 text-center my-16 border border-slate-100">
+            <p class="text-xs text-slate-500 max-w-2xl mx-auto mb-6">
+                Te invitamos a explorar el catálogo completo de soluciones de alta tecnología de INFRICO e INTARCON. Encuentra el equipo exacto para tu sector y regresa con nosotros para gestionar tu cotización personalizada y soporte.
+            </p>
+            <img src="/images/brands/teltonika.png" alt="INFRICO" class="h-10 mx-auto mb-6 object-contain" />
+            <img src="/images/brands/teltonika.png" alt="INTARCON" class="h-10 mx-auto mb-6 object-contain" />
+            <a 
+                href="#contacto" 
+                class="inline-block bg-[#004B6E] text-white text-sm font-medium px-6 py-2.5 rounded-full"
+            >
+                Consultar ahora
+            </a>
+        </section>
+
+        <section class="my-16">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-slate-800">Soluciones INFRICO</h2>
+                <p class="text-sm text-slate-500 mt-1">
+                Equipamiento profesional para cocinas comerciales e industriales que garantiza un alto desempeño, eficiencia energética y conservación óptima de alimentos.
+                </p>
+            </div>
+
+            <!--CARDS de productos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {data.products2.map((product) => (
+                <ProductCard 
+                    title={product.title}
+                    tag={product.tag}
+                    description={product.description}
+                    image={product.image}
+                    featured={product.featured}
+                />
+                ))}
+            </div>
+        </section>
+
+        <section class="bg-slate-50 rounded-2xl p-8 text-center my-16 border border-slate-100">
+            <p class="text-xs text-slate-500 max-w-2xl mx-auto mb-6">
+                Explora la gama completa de soluciones médicas y de abatimiento en la web oficial de INFRICO. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado.
+            </p>
+            <img src="/images/brands/teltonika.png" alt="INFRICO" class="h-10 mx-auto mb-6 object-contain" />
+            <a 
+                href="#contacto" 
+                class="inline-block bg-[#004B6E] text-white text-sm font-medium px-6 py-2.5 rounded-full"
+            >
+                Consultar ahora
+            </a>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="my-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-slate-800 uppercase tracking-wider">Contáctanos</h2>
+            </div>
+            <ContactForm />
+        </section>
+
+    </main>
+</MainLayout>

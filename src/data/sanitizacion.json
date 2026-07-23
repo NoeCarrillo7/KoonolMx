@@ -1,0 +1,37 @@
+{
+    "title": "Soluciones de SANITIZA",
+    "subtitle": "y Lavado Profesional",
+    "description": "Soluciones integrales para la higienización e inocuidad comercial en el sector industrial y gastronómico.",
+    "brand": "Winterhalter",
+    "activeCategory": "sanitizacion",
+    "winterhalterProducts": [
+        {
+        "id": "lavavajillas-mtr",
+        "tag": "Lavado Profesional",
+        "title": "Lavavajillas MTR",
+        "description": "Lavavajillas de cinta transportadora de alto rendimiento diseñado para la limpieza eficiente de volúmenes elevados de vajilla en cocinas industriales.",
+        "images": [
+            "/images/products/mtr-1.png",
+            "/images/products/mtr-2.png"
+        ]
+        },
+        {
+        "id": "quimicos-dosificacion",
+        "tag": "Químicos y Equipos",
+        "title": "Detergentes y Abrillantadores",
+        "description": "Formulados específicamente para garantizar resultados impecables y proteger el equipo.",
+        "images": [
+            "/images/products/detergentes-group.png"
+        ]
+        }
+    ],
+    "validexProducts": [
+        {
+        "id": "transportadora-horizontal",
+        "tag": "Soluciones Validex",
+        "title": "Transportadoras Horizontales",
+        "description": "Sistemas automatizados de transporte horizontal para manejo de charolas y vajilla.",
+        "image": "/images/products/validex-horizontal.png"
+        }
+    ]
+}

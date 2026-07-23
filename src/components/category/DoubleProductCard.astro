@@ -1,0 +1,60 @@
+---
+interface Props {
+  tag: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
+const { tag, title, description, images } = Astro.props;
+---
+
+<div class="bg-white rounded-xl p-6 border border-slate-100 shadow-xl flex justify-between">
+    <!-- Cabecera de la tarjeta -->
+        <div>
+            <div class="text-center mb-4">
+                <span class="text-xs font-semibold text-[#004B6E] uppercase tracking-wider">{tag}</span>
+                <h3 class="text-lg font-bold text-slate-800">{title}</h3>
+            </div>
+
+            <!-- Contenedor de las dos imágenes/variaciones -->
+            <div class="grid grid-cols-2 gap-4 items-center justify-items-center my-4">
+                {images.map((imgUrl, index) => (
+                <img 
+                    src={imgUrl} 
+                    alt={`${title} - Vista ${index + 1}`} 
+                    class="max-h-36 object-contain w-auto"
+                />
+                ))}
+            </div>
+
+            <!-- Descripción inferior -->
+            <p class="text-xs text-slate-500 text-center leading-relaxed mt-2">
+                {description}
+            </p>
+        </div>
+
+        
+        <div>
+            <div class="text-center mb-4">
+                <span class="text-xs font-semibold text-[#004B6E] uppercase tracking-wider">{tag}</span>
+                <h3 class="text-lg font-bold text-slate-800">{title}</h3>
+            </div>
+
+            <!-- Contenedor de las dos imágenes/variaciones -->
+            <div class="grid grid-cols-2 gap-4 items-center justify-items-center my-4">
+                {images.map((imgUrl, index) => (
+                <img 
+                    src={imgUrl} 
+                    alt={`${title} - Vista ${index + 1}`} 
+                    class="max-h-36 object-contain w-auto"
+                />
+                ))}
+            </div>
+
+            <!-- Descripción inferior -->
+            <p class="text-xs text-slate-500 text-center leading-relaxed mt-2">
+                {description}
+            </p>
+        </div>
+</div>

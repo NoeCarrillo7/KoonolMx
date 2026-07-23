@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+
+import telecomImg from '../../assets/menu/telecomunicaciones.png';
+import autoImg from '../../assets/menu/automatizacion.png';
+import refriImg from '../../assets/menu/refrigeracion.png';
+import saniImg from '../../assets/menu/sanitizacion.png';
+
+interface Props {
+    active: 'telecomunicaciones' | 'automatizacion' | 'refrigeracion' | 'sanitizacion';
+}
+
+const { active } = Astro.props;
+
+const categories = [
+    { id: 'telecomunicaciones', image: telecomImg, label: 'Telecomunicaciones', href: '/productos/telecomunicaciones' },
+    { id: 'automatizacion', image: autoImg, label: 'Automatización', href: '/productos/automatizacion' },
+    { id: 'refrigeracion', image: refriImg, label: 'Refrigeración', href: '/productos/refrigeracion' },
+    { id: 'sanitizacion', image: saniImg, label: 'Sanitización', href: '/productos/sanitizacion' },
+];
+---
+
+<div class="flex flex-col md:flex-row items-center md:justify-between md:rounded-full md:bg-white md:shadow-md my-8 overflow-x-auto">
+  {categories.map((cat) => {
+    const isActive = cat.id === active;
+    return (
+        <a
+            href={cat.href}
+            class={`group w-full md:w-2/5 py-4 flex justify-center gap-3 rounded-full text-sm md:text-base font-medium md:font-semibold whitespace-nowrap transition-all ${
+            isActive
+                ? 'bg-principal text-white'
+                : 'text-principal hover:bg-slate-100'
+            }`}
+        >
+            {cat.image && (
+            <Image 
+                src={cat.image} 
+                alt={`Icono de ${cat.label}`}
+
+                class={`w-6 h-6 object-contain transition-all duration-300 ${
+                isActive 
+                    ? 'brightness-0 invert' 
+                    : ''
+                }`}
+            />
+            )}
+            {cat.label}
+        </a>
+        );
+    })}
+</div>

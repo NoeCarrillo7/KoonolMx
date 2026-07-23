@@ -1,0 +1,66 @@
+{
+    "title": "Soluciones de REFRIGERA Industrial y Cocción Especializada",
+    "description": "Suministro de cámaras frigoríficas, evaporadores, condensadores y equipos especializados para conservación, cadena de frío y aplicaciones médicas",
+    "brand": "Impafri, Intarcon, Infrico, Unox",
+    "activeCategory": "refrigeracion",
+    "products": [
+        {
+        "id": "rut241",
+        "title": "Router Industrial RUT241",
+        "tag": "Router",
+        "description": "El RUT241 es un router celular compacto de calidad industrial diseñado para una conectividad fiable y versátil en aplicaciones IoT e M2M.",
+        "image": "/images/products/rut241.png",
+        "featured": false
+        },
+        {
+        "id": "rut956",
+        "title": "Router Industrial RUT956",
+        "tag": "Router",
+        "description": "Router industrial con soporte de SIM dual y varias interfaces de red.",
+        "image": "/images/products/rut956.png",
+        "featured": false
+        },
+        {
+        "id": "rutx11",
+        "title": "Router Industrial RUTX11",
+        "tag": "Router",
+        "description": "Dispositivo Wi-Fi de doble banda y Dual SIM para entornos exigentes.",
+        "image": "/images/products/rutx11.png",
+        "featured": false
+        }
+    ],
+    "products2": [
+        {
+        "id": "tsw200",
+        "title": "Switch Industrial TSW200",
+        "tag": "Switch",
+        "description": "Switch no administrado industrial no gestionado con puertos PoE+.",
+        "image": "/images/products/tsw200.png",
+        "featured": false
+        },
+        {
+        "id": "trb140",
+        "title": "Gateway TRB140",
+        "tag": "Gateway",
+        "description": "Pasarela LTE muy reducida para aplicaciones de red simples.",
+        "image": "/images/products/trb140.png",
+        "featured": false
+        },
+        {
+        "id": "tsw200",
+        "title": "Switch Industrial TSW200",
+        "tag": "Switch",
+        "description": "Switch no administrado industrial no gestionado con puertos PoE+.",
+        "image": "/images/products/tsw200.png",
+        "featured": false
+        },
+        {
+        "id": "trb140",
+        "title": "Gateway TRB140",
+        "tag": "Gateway",
+        "description": "Pasarela LTE muy reducida para aplicaciones de red simples.",
+        "image": "/images/products/trb140.png",
+        "featured": false
+        }
+    ]
+}

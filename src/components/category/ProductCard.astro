@@ -1,0 +1,68 @@
+---
+interface Props {
+    title: string;
+    tag: string;
+    description: string;
+    image: string;
+    featured?: boolean;
+}
+
+const { title, tag, description, image, featured = false } = Astro.props;
+---
+
+<div class={`card-item group/card relative rounded-2xl p-6 transition-all duration-500 ease-in-out cursor-pointer border shadow-xl flex flex-col items-center text-center overflow-hidden ${
+    featured 
+        ? 'is-featured border-2 border-principal' 
+        : 'border-slate-100'
+}`}>
+    
+    <img 
+        src={image} 
+        alt={title} 
+        class="card-img object-contain transition-all duration-500 w-28 h-28 mb-4" 
+    />
+        
+    <div class="w-full flex-1 flex flex-col justify-center items-center">
+        <span class="card-tag block text-xs font-semibold text-principal tracking-wider transition-all duration-500 opacity-0 max-h-0 overflow-hidden">
+            {tag}
+        </span>
+
+        <h3 class="text-xl font-semibold mt-1 mb-2">{title}</h3>
+
+        <p class="card-desc text-xs text-textos leading-relaxed transition-all duration-200 opacity-0 max-h-0 overflow-hidden">
+            {description}
+        </p>
+    </div>
+</div>
+
+<style>
+    .container-cards:not(:hover) .is-featured,
+    .card-item:hover {
+        flex: 2 !important;
+        border-color: var(--color-principal, #000);
+        border-width: 2px;
+    }
+
+    .container-cards:not(:hover) .is-featured .card-img,
+    .card-item:hover .card-img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .container-cards:not(:hover) .is-featured .card-tag,
+    .card-item:hover .card-tag {
+        opacity: 1;
+        max-height: 2.5rem;
+    }
+
+    .container-cards:not(:hover) .is-featured .card-desc,
+    .card-item:hover .card-desc {
+        opacity: 1;
+        max-height: 10rem;
+        margin-top: 0.5rem;
+    }
+
+    .card-item {
+        flex: 1;
+    }
+</style>

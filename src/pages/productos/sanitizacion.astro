@@ -1,0 +1,100 @@
+---
+import Nav_bar from "../../components/common/Navbar.astro";
+
+import MainLayout from '../../layouts/MainLayout.astro';
+import CategoryNav from '../../components/category/CategoryNav.astro';
+import ProductCard from '../../components/category/ProductCard.astro';
+import DoubleProductCard from '../../components/category/DoubleProductCard.astro';
+import ContactForm from '../../components/common/ContactForm.astro';
+
+import data from '../../data/sanitizacion.json';
+
+import hero_imagen from '../../assets/sanitizacion/hero-imagen.png'
+---
+
+<MainLayout title="Sanitización | Koonol MX">
+    <Nav_bar />
+
+
+    <main class="w-5/6 mx-auto  py-10">
+        
+        <!-- HERO -->
+        <section>
+            <div class="flex flex-col items-center md:items-start">
+                <span class="w-full text-center md:text-start text-sm md:text-xl font-semibold text-principal">Soluciones de</span>
+                <h1 class="text-5xl md:text-[17rem] font-semibold text-[#D7E6EB] tracking-tight leading-[0.75] ">SANITIZA</h1>
+                <p class="w-full text-center md:text-end text-sm md:text-3xl font-semibold text-principal">y Lavado Profesional</p>
+            </div>
+
+            <div class="flex flex-col justify-between items-center md:gap-15 md:flex-row mt-5 md:mt-0">
+                <div class="md:h-50 md:border-l-2 border-gray-300 flex flex-col items-center text-center md:pl-5 md:items-start">
+                    <!--Descripcion categoria -->
+                    <p class="text-textos text-xs md:text-lg font-medium text-center mb-6 md:text-start">
+                    {data.description}
+                    </p>
+
+                    <span class="text-principal text-sm md:text-lg font-medium max-w-md leading-relaxed mb-6">{data.brand}</span>
+                    
+                    <a
+                        href="#contacto"
+                        class="w-1/2 text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium py-3 rounded-full hover:bg-slate-800 transition-colors"
+                        >
+                        Contactanos
+                    </a>
+                </div>
+                <img src={hero_imagen.src} alt="Telecom Hardware" class="w-full mt-5 md:w-1/2 md:mt-0" />
+            </div>
+        </section>
+
+        <!-- Nav de categorias -->
+        <CategoryNav active={data.activeCategory as any} />
+
+        <section class="my-12">
+            <div class="mb-8">
+                <h2 class="text-xl md:text-4xl font-semibold text-principal">Productos WINTERHALTER</h2>
+                <p class="text-xs md:text-base text-textos mt-4">
+                    Soluciones especializadas para mantener altos estándares de higiene en cocinas industriales y procesos de producción, 
+                    mejorando la eficiencia del lavado y la sanitización.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                {data.winterhalterProducts.map((item) => (
+                <DoubleProductCard 
+                    tag={item.tag}
+                    title={item.title}
+                    description={item.description}
+                    images={item.images}
+                />
+                ))}
+            </div>
+        </section>
+
+        <!-- BANNER MARCA 1 -->
+        <section class="bg-slate-50 rounded-2xl p-6 text-center my-10 border border-slate-100">
+        <img src="/images/brands/winterhalter.png" alt="Winterhalter" class="h-8 mx-auto mb-4 object-contain" />
+        <a href="#contacto" class="inline-block bg-[#004B6E] text-white text-xs px-6 py-2 rounded-full">Consultar ahora</a>
+        </section>
+
+        <!-- SECCIÓN VALIDEX (Tarjetas sencillas de 3 columnas) -->
+        <section class="my-12">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Soluciones VALIDEX</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {data.validexProducts.map((item) => (
+            <ProductCard 
+                title={item.title}
+                tag={item.tag}
+                description={item.description}
+                image={item.image}
+            />
+            ))}
+        </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="my-16">
+        <ContactForm />
+        </section>
+
+    </main>
+</MainLayout>
