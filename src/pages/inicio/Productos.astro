@@ -1,0 +1,182 @@
+---
+import telecom from "../../assets/inicio/productos/telecom.png";
+import automatizacion from "../../assets/inicio/productos/automatizacion.png";
+import refrigeracion from "../../assets/inicio/productos/refrigeracion.png";
+import sanitizacion from "../../assets/inicio/productos/sanitizacion.png";
+import rectangulo from "../../assets/inicio/productos/rectangulo.png";
+---
+<section class="w-full py-24">
+     <!-- Rectangulo izquierda-->
+  <img
+    src={rectangulo.src}
+    alt=""
+    class="absolute top-405 left-0 w-280 pointer-events-none"
+  />
+
+    <div class="w-5/6 mx-auto mb-40">
+        <div class="inline-block">
+
+            <div class="relative text-white px-16 py-5 text-5xl font-medium">
+                Nuestros Principales Productos
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCTO 01 -->
+    <div class="grid lg:grid-cols-2">
+
+
+        <div class="flex flex-col justify-center px-40 py-16">
+
+            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+                Telecomunicaciones y Conectividad
+            </h2>
+
+            <p class="text-textos font-medium mb-6">
+                Suministro de hardware avanzado para redes industriales, enlaces de datos robustos y conectividad crítica.
+            </p>
+
+            <span class="font-semibold text-[#0C6077] mb-8">
+                Teltonika Networks
+            </span>
+
+            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+                Ver productos →
+            </button>
+
+        </div>
+
+        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+            <img
+                src={telecom.src}
+                alt="Telecomunicaciones"
+                class="w-95"
+            />
+            <span class="absolute bottom-6 right-8 text-8xl text-white/30">
+                01
+            </span>
+        </div>
+         
+
+    </div>
+
+    <!-- PRODUCTO 02 -->
+
+    <div class="grid lg:grid-cols-2">
+
+
+        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+
+            <img
+                src={automatizacion.src}
+                alt="Automatización"
+                class="w-95"
+            />
+            <span class="absolute bottom-6 left-8 text-8xl text-white/30">
+                02
+            </span>
+
+
+        </div>
+
+
+       <div class="flex flex-col justify-center items-end text-right px-40 py-16">
+
+            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+                Automatizacion, Control y Sistemas de IA
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Equipamiento enfocado en la transición hacia la industria 4.0, optimización y estandarización de procesos bajo normativas internacionales.
+            </p>
+
+            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+                ← Ver productos
+            </button>
+
+        </div>
+
+    </div>
+    <!-- PRODUCTO 03 -->
+
+    <div class="grid lg:grid-cols-2">
+
+
+        <div class="flex flex-col justify-center px-40 py-16">
+
+            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+                Refrigeración Industrial y Cocción Especializada
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Soluciones de refrigeración comercial/industrial y equipamiento térmico de precisión para la cadena de valor alimentaria y de transformación.
+            </p>
+
+            <span class="font-semibold text-[#0C6077] mb-8">
+                Infrico, Unox
+            </span>
+
+            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+                Ver productos →
+            </button>
+
+        </div>
+
+
+        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+
+            <img
+                src={refrigeracion.src}
+                alt="Refrigeración"
+                class="w-120"
+            />
+             <span class="absolute bottom-6 right-8 text-8xl text-white/30">
+                03
+            </span>
+        </div>
+
+    </div>
+
+    <!-- PRODUCTO 04 -->
+
+    <div class="grid lg:grid-cols-2">
+
+
+        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+
+            <img
+                src={sanitizacion.src}
+                alt="Sanitización"
+                class="w-120"
+            />
+            <span class="absolute bottom-6 left-8 text-8xl text-white/30">
+                04
+            </span>
+        </div>
+
+
+        <div class="flex flex-col justify-center items-end text-right px-40 py-16">
+
+            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+                Sistemas de Sanitización y Lavado Profesional
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Equipos especializados de alta eficiencia para el sector hostelero e industrial (lavalozas y sanitización automatizada).
+            </p>
+
+            <span class="font-semibold text-[#0C6077] mb-8">
+                Winterhalter, Validex
+            </span>
+
+            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+                ← Ver productos
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

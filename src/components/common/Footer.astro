@@ -1,11 +1,102 @@
 ---
-
+import logo from "../../assets/footer/logoblanco.png";
+import logohbl from "../../assets/footer/logoHBLmorado.png";
 ---
 
+<section class="bg-[#025971] text-white w-full">
+	<div class="max-w-7xl mx-auto px-8 py-16">
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+			<div>
+				<img src={logo.src} alt="Koonol MX" class="w-50 mb-5" />
+			</div>
+			<!-- Links -->
+			<div>
+				<h3 class="font-bold text-lg mb-6 uppercase tracking-wider">
+					Links
+				</h3>
+				<ul class="space-y-3 text-sm">
+					<li><a href="/" class="hover:text-gray-300">Inicio</a></li>
+					<li>
+						<a href="/nosotros" class="hover:text-gray-300"
+							>Nosotros</a
+						>
+					</li>
+					<li>
+						<a href="/productos" class="hover:text-gray-300"
+							>Productos</a
+						>
+					</li>
+					<li>
+						<a href="/contacto" class="hover:text-gray-300"
+							>Contacto</a
+						>
+					</li>
+				</ul>
+			</div>
 
+			<div>
+				<h3 class="font-bold text-lg mb-0 uppercase tracking-wider">
+					Social
+				</h3>
+				<div class="flex gap-8 pt-5">
+					<a>
+						<i class="fa-brands fa-facebook-f text-2xl"></i>
+					</a>
+					<a>
+						<i class="fa-brands fa-whatsapp text-2xl"></i>
+					</a>
+					<a>
+						<i class="fa-brands fa-instagram text-2xl"></i>
+					</a>
+				</div>
+			</div>
 
-<section class="bg-[#025971] w-full flex flex-col items-center">
-    <div class="w-5/6 h-100">
-		<p class="text-white">FOOTER</p>
+			<div>
+				<h3 class="font-bold text-lg mb-6 uppercase tracking-wider">
+					Contacto
+				</h3>
+
+				<div class="space-y-5 text-sm">
+					<div class="flex items-start gap-4">
+						<i class="fa-solid fa-phone mt-1 text-lg"></i>
+						<p>+52 442 454 0557</p>
+					</div>
+
+					<div class="flex items-start gap-4">
+						<i class="fa-regular fa-envelope mt-1 text-lg"></i>
+						<p>contacto@koonol.com.mx</p>
+					</div>
+
+					<div class="flex items-start gap-4">
+						<i class="fa-solid fa-location-dot mt-1 text-lg"></i>
+						<p>
+							Camino al Cerrito N1,<br />
+							Local 1A,<br />
+							El Pueblito, Querétaro.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="border-t border-white/20 mt-14 pt-8">
+			<p class="text-center text-white/60 text-sm">
+				© Copyright 2026 Koonol MX | Todos los Derechos Reservados.
+			</p>
+		</div>
+	</div>
+	<div class="bg-white py-4">
+		<div
+			class="max-w-7xl mx-auto flex justify-center items-center gap-3 text-sm text-gray-600"
+		>
+			<span>Diseño y desarrollo web</span>
+			<span class="text-white px-2 py-1 rounded text-xs font-semibold">
+				<img
+					src={logohbl.src}
+					alt="HBL MORADO"
+					class="w-auto mb-auto"
+				/>
+			</span>
+		</div>
 	</div>
 </section>

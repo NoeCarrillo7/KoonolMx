@@ -1,0 +1,78 @@
+---
+import esencia from "../../assets/inicio/valores/esencia.png";
+import circulo1 from "../../assets/inicio/valores/circulo1.png";
+import circulo2 from "../../assets/inicio/valores/circulo2.png";
+import circulo3 from "../../assets/inicio/valores/circulo3.png";
+---
+
+<section class="w-full py-24">
+    <!-- Circulo derecha-->
+    <img
+        src={circulo2.src}
+        alt=""
+        class="absolute top-905 right-0 w-60 pointer-events-none"
+    />
+    <!-- Circulo izquierda-->
+    <img
+        src={circulo1.src}
+        alt=""
+        class="absolute top-900 left-0 w-30 pointer-events-none"
+    />
+    <!-- Circulo Centro izquierda-->
+    <img
+        src={circulo3.src}
+        alt=""
+        class="absolute top-1085 right-80 w-40 pointer-events-none"
+    />
+
+    <div
+        class="w-11/12 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center"
+    >
+        <div class="flex justify-center">
+            <img
+                src={esencia.src}
+                alt="Nuestra Esencia"
+                class="w-full max-w-[800px]"
+            />
+        </div>
+
+        <!-- Contenido -->
+        <div class="flex flex-col justify-between gap-35">
+            <!-- Misión -->
+            <div class="flex flex-col gap-2 lg:-translate-x-40">
+                <h2 class="text-4xl font-medium text-principal">Misión</h2>
+                <p class="text-textos text-lg leading-relaxed text-justify">
+                    Actuar como el enlace estratégico y confiable para la
+                    obtención de soluciones en equipamiento y refaccionamiento
+                    premium en los sectores de automatización, control,
+                    conectividad y sistemas de IA.
+                </p>
+            </div>
+
+            <!-- Visión -->
+            <div class="flex flex-col gap-2 lg:-translate-x-5">
+                <h2 class="text-4xl font-medium text-principal">Visión</h2>
+
+                <p class="text-textos text-lg leading-relaxed text-justify">
+                    Ser el factor diferencial en el ciclo de vida de proyectos
+                    industriales, acercando tecnología de marcas premium
+                    verificadas que garanticen la continuidad operativa.
+                </p>
+            </div>
+
+            <!-- Valor Central -->
+            <div class="flex flex-col gap-0 lg:-translate-x-40">
+                <h2 class="text-4xl font-medium text-principal">
+                    Valor Central
+                </h2>
+
+                <p class="text-textos text-lg leading-relaxed text-justify">
+                    Calidad y Compromiso Real. Diseñamos soluciones enfocadas en
+                    el beneficio común y la eficiencia técnica a largo plazo,
+                    priorizando el rendimiento del ciclo de vida del equipo
+                    sobre la transacción monetaria inmediata.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,10 +1,33 @@
 ---
-
+import logo from "../../assets/nav/logo.png";
 ---
 
+<section
+  class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center">
+  <div class="w-5/6 h-20 flex items-center justify-between px-8">
+    <!-- Logo -->
+    <div>
+      <img src={logo.src} alt="KoonolMx" class="h-[160px] w-auto" />
+    </div>
 
-<section class="w-full flex flex-col items-center">
-    <div class="w-5/6 h-20 border border">
-		<p class="text-principal">Navbar</p>
-	</div>
+    <!-- Menú -->
+    <nav class="flex items-center gap-3 bg-white rounded-full shadow-md p-2">
+      <a href="/" class="px-6 py-3 rounded-full bg-[#025971] text-white font-medium">
+        Inicio
+      </a>
+
+      <a href="/" class="px-6 py-3 rounded-full hover:bg-[#025971] hover:text-white transition">
+        Productos
+      </a>
+
+      <a href="/" class="px-6 py-3 rounded-full hover:bg-[#025971] hover:text-white transition">
+        Nosotros
+      </a>
+    </nav>
+
+    <!-- Botón -->
+    <a href="/" class="px-8 py-4 rounded-full bg-[#025971] text-white font-medium hover:scale-105 transition">
+      Contacto
+    </a>
+  </div>
 </section>
