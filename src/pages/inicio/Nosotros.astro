@@ -1,0 +1,77 @@
+---
+import logo from "../../assets/footer/logoColor.png";
+import engrane from "../../assets/inicio/nosotros/refaccion.png";
+import rectangulo from "../../assets/inicio/nosotros/rectangulo.png";
+import cuadro from "../../assets/inicio/nosotros/cuadro.png";
+---
+
+<section class="w-full flex justify-center py-24 mt-40">
+  <!-- Engrane derecha-->
+  <img
+    src={engrane.src}
+    alt=""
+    class="absolute top-250 right-0 w-100 pointer-events-none"
+  />
+  <!-- Rectangulo derecha-->
+  <img
+    src={rectangulo.src}
+    alt=""
+    class="absolute top-235 right-0 w-210 pointer-events-none"
+  />
+  <!-- Cuadro izquierda-->
+  <img
+    src={cuadro.src}
+    alt=""
+    class="absolute top-180 left-0 w-50 pointer-events-none"
+  />
+
+  <div class="w-5/6 relative">
+    <!-- Franja superior -->
+    <div class="absolute right-0 -top-8">
+      <div class="relative text-white px-16 py-4 text-5xl font-medium">
+        ¿Por qué Koonol?
+      </div>
+    </div>
+
+    <!-- Contenedor -->
+    <div class="p-12 pt-35">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Logo -->
+        <div class="flex justify-center">
+          <img src={logo.src} alt="Koonol MX" class="w-100" />
+        </div>
+
+        <!-- Texto -->
+        <div class="space-y-3">
+          <div class="flex gap-4">
+            <i class="fa-regular fa-circle-check text-principal text-3xl mt-1"
+            ></i>
+            <p class="text-textos font-medium text-justify">
+              Somos una empresa integrada por profesionales con más de 20 años
+              de experiencia ejecutiva y técnica en el sector industrial.
+            </p>
+          </div>
+
+          <div class="flex gap-4">
+            <i class="fa-regular fa-circle-check text-principal text-3xl mt-1"
+            ></i>
+            <p class="text-textos font-medium text-justify">
+              Negociamos directamente con las plantas matriz de los fabricantes
+              globales, garantizando autenticidad, soporte de fábrica y precios
+              competitivos.
+            </p>
+          </div>
+
+          <div class="flex gap-4">
+            <i class="fa-regular fa-circle-check text-principal text-3xl mt-1"
+            ></i>
+            <p class="text-textos font-medium text-justify">
+              Operación y logística con capacidad internacional, con cobertura y
+              distribución prioritaria en todo el territorio nacional mexicano.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

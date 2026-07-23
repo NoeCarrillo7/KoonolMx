@@ -3,19 +3,53 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Contacto from "../components/common/ContactForm.astro";
 import Nav_bar from "../components/common/Navbar.astro";
 import Footer from "../components/common/Footer.astro";
+import Nosotros from "../pages/inicio/Nosotros.astro";
+import Productos from "../pages/inicio/Productos.astro";
+import Valores from "../pages/inicio/Valores.astro";
+import inicio from "../../src/assets/inicio/inicio.png";
 ---
 
 <MainLayout title="KoonolMX">
 	<Nav_bar />
 
+	<section class="relative w-full min-h-screen flex items-center overflow-hidden">
+		<!-- Imagen-->
+		<div class="absolute inset-0 flex justify-end items-center pointer-events-none mt-60 mb-40">
+			<img
+				src={inicio.src}
+				alt=""
+				class="w-[65%] max-w-none object-contain object-right"/>
+		</div>
 
-	<section class="w-full flex justify-center">
-		<div class="w-5/6 border border-blue-600 h-100">
-			<p class="text-principal">INICIO</p>
+		<!-- Texto -->
+		<div class="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-10 mt-30">
+			<div class="max-w-[800px]">
+
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-principal">
+					Integrando equipamiento
+					<br />
+					ingenieril premium para la
+					<span class="text-[#7B97A6]"> industria global. </span>
+				</h1>
+
+				<p class="mt-8 text-lg text-textos leading-relaxed max-w-lg">
+					Comercializadora especializada en los sectores de
+					transformación, refrigeración,
+					<span class="text-[#3F88A4]">
+						automatización y conectividad.
+					</span>
+				</p>
+
+				<a href="#" class="inline-flex mt-10 bg-[#0C5E78] text-white px-10 py-4 rounded-full shadow-lg hover:bg-[#08495d] transition-all duration-300">
+					Contáctanos
+				</a>
+			</div>
 		</div>
 	</section>
-
-
+	<Nosotros />
+	<Productos />
+	<Valores />
+	
 	<Contacto />
 	<Footer />
 </MainLayout>
