@@ -5,36 +5,25 @@ import refrigeracion from "../../assets/inicio/productos/refrigeracion.png";
 import sanitizacion from "../../assets/inicio/productos/sanitizacion.png";
 import rectangulo from "../../assets/inicio/productos/rectangulo.png";
 ---
-<section class="w-full py-24">
-     <!-- Rectangulo izquierda-->
-  <img
-    src={rectangulo.src}
-    alt=""
-    class="absolute top-405 left-0 w-280 pointer-events-none"
-  />
-
-    <div class="w-5/6 mx-auto mb-40">
-        <div class="inline-block">
-
-            <div class="relative text-white px-16 py-5 text-5xl font-medium">
-                Nuestros Principales Productos
-            </div>
-
-        </div>
-
-    </div>
+<section class="w-full ">
+    <!-- Rectangulo izquierda-->
+    <img
+        src={rectangulo.src}
+        alt=""
+        class="w-60 md:w-280 pointer-events-none md:mb-40 mt-10"
+    />
 
     <!-- PRODUCTO 01 -->
-    <div class="grid lg:grid-cols-2">
+    <div class="flex flex-col md:flex-row  w-5/6 mx-auto md:w-full gap-5 md:gap-0 mt-5 md:mt-0">
 
 
-        <div class="flex flex-col justify-center px-40 py-16">
+        <div class="md:w-1/2 flex flex-col items-center md:items-start md:justify-center md:px-40 md:py-16 text-center md:text-left">
 
-            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+            <h2 class="md:text-3xl font-semibold md:font-bold text-[#0C6077] mb-6">
                 Telecomunicaciones y Conectividad
             </h2>
 
-            <p class="text-textos font-medium mb-6">
+            <p class="text-textos md:font-medium mb-6 text-xs md:text-base">
                 Suministro de hardware avanzado para redes industriales, enlaces de datos robustos y conectividad crítica.
             </p>
 
@@ -42,19 +31,19 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
                 Teltonika Networks
             </span>
 
-            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+            <a href="/productos/telecomunicaciones" class="bg-[#1D5F73] text-xs md:text-base text-white md:px-8 md:py-3 py-2 rounded-full md:w-fit w-4/5">
                 Ver productos →
-            </button>
+            </a>
 
         </div>
 
-        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+        <div class="md:w-1/2 bg-[#1D5F73] relative flex flex-col md:flex-row items-center justify-center h-40 md:min-h-[450px]">
             <img
                 src={telecom.src}
                 alt="Telecomunicaciones"
-                class="w-95"
+                class="w-1/2 md:w-95"
             />
-            <span class="absolute bottom-6 right-8 text-8xl text-white/30">
+            <span class="md:absolute bottom-6 right-8 text-xl md:text-8xl text-white/30">
                 01
             </span>
         </div>
@@ -64,17 +53,17 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
 
     <!-- PRODUCTO 02 -->
 
-    <div class="grid lg:grid-cols-2">
+    <div class="flex flex-col-reverse md:flex-row w-5/6 mx-auto md:w-full gap-5 md:gap-0 mt-10 md:mt-0">
 
 
-        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+        <div class="md:w-1/2 bg-[#1D5F73] relative flex flex-col md:flex-row items-center justify-center h-40 md:min-h-[450px]">
 
             <img
                 src={automatizacion.src}
                 alt="Automatización"
-                class="w-95"
+                class="w-1/2 md:w-95"
             />
-            <span class="absolute bottom-6 left-8 text-8xl text-white/30">
+            <span class="md:absolute bottom-6 right-8 text-xl md:text-8xl text-white/30">
                 02
             </span>
 
@@ -82,35 +71,35 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
         </div>
 
 
-       <div class="flex flex-col justify-center items-end text-right px-40 py-16">
+       <div class="md:w-1/2 flex flex-col items-center md:items-end md:justify-end md:px-40 md:py-16 text-center md:text-right">
 
-            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+            <h2 class="md:text-3xl font-semibold md:font-bold text-[#0C6077] mb-6">
                 Automatizacion, Control y Sistemas de IA
             </h2>
 
-            <p class="text-gray-600 leading-relaxed mb-6">
+            <p class="text-textos md:font-medium mb-6 text-xs md:text-base">
                 Equipamiento enfocado en la transición hacia la industria 4.0, optimización y estandarización de procesos bajo normativas internacionales.
             </p>
 
-            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+            <a href="productos/automatizacion" class="bg-[#1D5F73] text-xs md:text-base text-white md:px-8 md:py-3 py-2 rounded-full md:w-fit w-4/5">
                 ← Ver productos
-            </button>
+            </a>
 
         </div>
 
     </div>
     <!-- PRODUCTO 03 -->
 
-    <div class="grid lg:grid-cols-2">
+    <div class="flex flex-col md:flex-row  w-5/6 mx-auto md:w-full gap-5 md:gap-0 mt-10 md:mt-0">
 
 
-        <div class="flex flex-col justify-center px-40 py-16">
+        <div class="md:w-1/2 flex flex-col items-center md:items-start md:justify-center md:px-40 md:py-16 text-center md:text-left">
 
-            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+            <h2 class="md:text-3xl font-semibold md:font-bold text-[#0C6077] mb-6">
                 Refrigeración Industrial y Cocción Especializada
             </h2>
 
-            <p class="text-gray-600 leading-relaxed mb-6">
+            <p class="text-textos md:font-medium mb-6 text-xs md:text-base">
                 Soluciones de refrigeración comercial/industrial y equipamiento térmico de precisión para la cadena de valor alimentaria y de transformación.
             </p>
 
@@ -118,21 +107,20 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
                 Infrico, Unox
             </span>
 
-            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+            <a href="/productos/refrigeracion" class="bg-[#1D5F73] text-xs md:text-base text-white md:px-8 md:py-3 py-2 rounded-full md:w-fit w-4/5">
                 Ver productos →
-            </button>
+            </a>
 
         </div>
 
 
-        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
-
+        <div class="md:w-1/2 bg-[#1D5F73] relative flex flex-col md:flex-row items-center justify-center h-40 md:min-h-[450px]">
             <img
                 src={refrigeracion.src}
-                alt="Refrigeración"
-                class="w-120"
+                alt="Telecomunicaciones"
+                class="w-1/2 md:w-95"
             />
-             <span class="absolute bottom-6 right-8 text-8xl text-white/30">
+            <span class="md:absolute bottom-6 right-8 text-xl md:text-8xl text-white/30">
                 03
             </span>
         </div>
@@ -141,29 +129,32 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
 
     <!-- PRODUCTO 04 -->
 
-    <div class="grid lg:grid-cols-2">
+
+    <div class="flex flex-col-reverse md:flex-row w-5/6 mx-auto md:w-full gap-5 md:gap-0 mt-10 md:mt-0">
 
 
-        <div class="bg-[#1D5F73] relative flex items-center justify-center min-h-[450px]">
+        <div class="md:w-1/2 bg-[#1D5F73] relative flex flex-col md:flex-row items-center justify-center h-40 md:min-h-[450px]">
 
             <img
                 src={sanitizacion.src}
-                alt="Sanitización"
-                class="w-120"
+                alt="sanitizacion"
+                class="w-1/2 md:w-95"
             />
-            <span class="absolute bottom-6 left-8 text-8xl text-white/30">
-                04
+            <span class="md:absolute bottom-6 right-8 text-xl md:text-8xl text-white/30">
+                02
             </span>
+
+
         </div>
 
 
-        <div class="flex flex-col justify-center items-end text-right px-40 py-16">
+        <div class="md:w-1/2 flex flex-col items-center md:items-end md:justify-end md:px-40 md:py-16 text-center md:text-right">
 
-            <h2 class="text-3xl font-bold text-[#0C6077] mb-6">
+            <h2 class="md:text-3xl font-semibold md:font-bold text-[#0C6077] mb-6">
                 Sistemas de Sanitización y Lavado Profesional
             </h2>
 
-            <p class="text-gray-600 leading-relaxed mb-6">
+            <p class="text-textos md:font-medium mb-6 text-xs md:text-base">
                 Equipos especializados de alta eficiencia para el sector hostelero e industrial (lavalozas y sanitización automatizada).
             </p>
 
@@ -171,9 +162,9 @@ import rectangulo from "../../assets/inicio/productos/rectangulo.png";
                 Winterhalter, Validex
             </span>
 
-            <button class="bg-[#0C6077] text-white px-8 py-3 rounded-full w-fit">
+            <a href="productos/sanitizacion" class="bg-[#1D5F73] text-xs md:text-base text-white md:px-8 md:py-3 py-2 rounded-full md:w-fit w-4/5">
                 ← Ver productos
-            </button>
+            </a>
 
         </div>
 

@@ -9,11 +9,19 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import data from '../../data/automatizacion.json';
 
 import hero_imagen from '../../assets/automatizacion/hero-imagen.png'
+import plc from '../../assets/automatizacion/plc.png'
+import refacciones from '../../assets/automatizacion/refacciones.png'
+import elemento1 from '../../assets/elementos.png'
+
 
 ---
 
 <MainLayout title="Automatización | Koonol MX">
     <Nav_bar />
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute left-0 top-80 md:top-400">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute left-0 top-650 md:top-150">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute right-0 top-100 md:top-350">
+    <img src={elemento1.src} alt="" class="h-15 md:h-35 absolute right-0 top-595 md:top-50">
 
 
     <main class="w-5/6 mx-auto  py-10">
@@ -62,13 +70,13 @@ import hero_imagen from '../../assets/automatizacion/hero-imagen.png'
             <!--CARDS de productos -->
             <div class="container-cards flex flex-col md:flex-row gap-4 w-full h-auto md:h-[400px] items-stretch">
                 {data.products.map((product) => (
-                <ProductCard 
-                    title={product.title}
-                    tag={product.tag}
-                    description={product.description}
-                    image={product.image}
-                    featured={product.featured}
-                />
+                    <ProductCard 
+                        title={product.title}
+                        tag={product.tag}
+                        description={product.description}
+                        image={product.image}
+                        featured={product.featured}
+                    />
                 ))}
             </div>
         </section>
@@ -76,27 +84,24 @@ import hero_imagen from '../../assets/automatizacion/hero-imagen.png'
         <!--  -->
         <section class="flex flex-col items-center md:mt-20">
             <h1 class="text-xl md:text-3xl font-semibold text-principal md:mb-10 text-center">¿Necesitas otro componente industrial?</h1>
-            <div class="flex flex-col md:flex-row items-center md:justify-center md:gap-10 w-full">
-                <div class="h-[380px]  w-full md:w-1/3 shadow-2xl rounded-xl">
-                    <h1>PLC</h1>
-                    <img src="" alt="">
-                    <a href="">Contactanos</a>
+            <div class="flex flex-col md:flex-row items-center md:justify-center gap-5 md:gap-10 w-full">
+                <div class="md:h-[500px] py-10 gap-5 w-full md:w-1/3 shadow-2xl rounded-xl flex flex-col items-center justify-center">
+                    <h1 class="font-semibold text-lg md:text-2xl">PLC</h1>
+                    <img src={plc.src} alt="" class="w-3/4">
+                    <a href="#contacto" class="text-principal font-semibold py-3">Contactanos →</a>
                 </div>
-                <div class="h-[380px] w-full md:w-1/3 shadow-2xl rounded-xl">
-                    <h1>Refacciones</h1>
-                    <img src="" alt="">
-                    <a href="">Contactanos</a>
+                <div class="md:h-[500px] py-10 gap-5 w-full md:w-1/3 shadow-2xl rounded-xl flex flex-col items-center justify-center">
+                    <h1 class="font-semibold text-lg md:text-2xl">Refacciones</h1>
+                    <img src={refacciones.src} alt="" class="w-3/4">
+                    <a href="#contacto" class="text-principal font-semibold  py-3">Contactanos →</a>
                 </div>
             </div>
             <p class="text-xs md:text-base text-textos mt-4 md:mt-10 text-justify md:text-center mb-5">Más de 2,500 SKUs disponibles, incluyendo PLC, HMI, variadores, sensores, relés, contactores, fuentes de alimentación, módulos de expansión y una amplia variedad de refacciones industriales para automatización y control.</p>
-            <a href="#contactanos" class=" text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium w-3/4 py-2 md:w-1/3 md:py-3 rounded-full hover:bg-slate-800 transition-colors">Consultar ahora</a>
+            <a href="#contacto" class=" text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium w-3/4 py-2 md:w-1/3 md:py-3 rounded-full hover:bg-slate-800 transition-colors">Consultar ahora</a>
         </section>
 
         <!-- CONTACTO -->
-        <section id="contacto" class="my-16">
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-slate-800 uppercase tracking-wider">Contáctanos</h2>
-            </div>
+        <section id="contacto">
             <ContactForm />
         </section>
 

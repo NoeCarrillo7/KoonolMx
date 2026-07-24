@@ -5,61 +5,61 @@
     "activeCategory": "refrigeracion",
     "products": [
         {
-        "id": "rut241",
-        "title": "Router Industrial RUT241",
-        "tag": "Router",
-        "description": "El RUT241 es un router celular compacto de calidad industrial diseñado para una conectividad fiable y versátil en aplicaciones IoT e M2M.",
-        "image": "/images/products/rut241.png",
+        "id": "Intarcon",
+        "title": "Unidades Evaporadoras",
+        "tag": "Intarcon",
+        "description": "Equipos de intercambio térmico eficientes que maximizan el espacio útil de almacenamiento. Garantizan una distribución uniforme del frío y un control preciso de la humedad.",
+        "image": "/assets/refrigeracion/evaporadora.png",
         "featured": false
         },
         {
-        "id": "rut956",
-        "title": "Router Industrial RUT956",
-        "tag": "Router",
-        "description": "Router industrial con soporte de SIM dual y varias interfaces de red.",
-        "image": "/images/products/rut956.png",
+        "id": "Impafri",
+        "title": "Camaras Frigoríficas",
+        "tag": "Impafri",
+        "description": "Cámaras modulares desmontables de panel sándwich de poliuretano, diseñadas para un uso intensivo en hostelería y cocinas profesionales",
+        "image": "/assets/refrigeracion/frigorifica.png",
         "featured": false
         },
         {
-        "id": "rutx11",
-        "title": "Router Industrial RUTX11",
-        "tag": "Router",
-        "description": "Dispositivo Wi-Fi de doble banda y Dual SIM para entornos exigentes.",
-        "image": "/images/products/rutx11.png",
+        "id": "Intarcon",
+        "title": "Unidades Condensadoras",
+        "tag": "Intarcon",
+        "description": "Sistemas de alta capacidad frigorífica diseñados para el exterior o salas técnicas. Optimizados para trabajar con nuevos refrigerantes de alta eficiencia energética.",
+        "image": "/assets/refrigeracion/condensadora.png",
         "featured": false
         }
     ],
     "products2": [
         {
-        "id": "tsw200",
-        "title": "Switch Industrial TSW200",
-        "tag": "Switch",
-        "description": "Switch no administrado industrial no gestionado con puertos PoE+.",
-        "image": "/images/products/tsw200.png",
+        "id": "Abatidores de Temperatura",
+        "title": "Serie ABT Comercial",
+        "tag": "Abatidores de Temperatura",
+        "description": "Equipos de alto rendimiento diseñados para optimizar los tiempos de producción en cocinas comerciales. Reducen drásticamente la temperatura central de los alimentos según las normativas sanitarias.",
+        "image": "/assets/refrigeracion/ABTComercial.png",
         "featured": false
         },
         {
-        "id": "trb140",
-        "title": "Gateway TRB140",
-        "tag": "Gateway",
-        "description": "Pasarela LTE muy reducida para aplicaciones de red simples.",
-        "image": "/images/products/trb140.png",
+        "id": "Abatidores de Temperatura",
+        "title": "Serie ABT Industrial",
+        "tag": "Abatidores de Temperatura",
+        "description": "Soluciones de gran volumen optimizadas para plantas de procesamiento de alimentos y cocinas industriales que operan con flujo continuo, asegurando una congelación rápida y uniforme a gran escala con la máxima eficiencia energética.",
+        "image": "/assets/refrigeracion/ABTIndustrial.png",
         "featured": false
         },
         {
-        "id": "tsw200",
-        "title": "Switch Industrial TSW200",
-        "tag": "Switch",
-        "description": "Switch no administrado industrial no gestionado con puertos PoE+.",
-        "image": "/images/products/tsw200.png",
+        "id": "Infrico Medcare",
+        "title": "Pharma CARE & Health CARE",
+        "tag": "Infrico Medcare",
+        "description": "Equipos certificados de alta estabilidad térmica diseñados específicamente para la custodia de vacunas, medicamentos y reactivos biológicos sensibles. Cuentan con sistemas avanzados  para garantizar la cadena de frío sin margen de error.",
+        "image": "/assets/refrigeracion/HealthCAR.png",
         "featured": false
         },
         {
-        "id": "trb140",
-        "title": "Gateway TRB140",
-        "tag": "Gateway",
-        "description": "Pasarela LTE muy reducida para aplicaciones de red simples.",
-        "image": "/images/products/trb140.png",
+        "id": "Infrico Medcare",
+        "title": "Lab CARE & Ultracongeladores",
+        "tag": "Infrico Medcare",
+        "description": "Sistemas de refrigeración de ultrabaja temperatura con tecnología Inverter y doble compresor para la preservación a largo plazo de muestras biológicas y material clínico crítico. Diseñados para ofrecer la máxima recuperación de temperatura.",
+        "image": "/assets/refrigeracion/Ultracongeladores.png",
         "featured": false
         }
     ]
