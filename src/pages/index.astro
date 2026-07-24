@@ -13,20 +13,19 @@ import inicio from "../../src/assets/inicio/inicio.png";
 	<Nav_bar />
 	<section class="w-full min-h-screen flex md:items-center overflow-hidden">
 		<!-- Imagen-->
-		<img src={inicio.src} alt="" class="md:w-[65%] object-contain absolute right-0 md:top-40 top-50"/>
 
 		<!-- Texto -->
-		<div class="w-5/6 mx-auto mt-30">
-			<div class="md:w-[800px] flex flex-col">
+		<div class="w-5/6 mx-auto mt-30 flex flex-col md:flex-row">
+			<div class="md:w-[800px] flex flex-col text-center md:text-start">
 
-				<h1 class="text-xl md:text-6xl font-medium leading-tight text-principal">
+				<h1 class="text-xl md:text-6xl font-medium leading-tight text-principal ">
 					Integrando equipamiento
 					<br />
 					ingenieril premium para la
 					<span class="text-[#7B97A6]"> industria global. </span>
 				</h1>
 
-				<p class="mt-8 text-xs md:text-lg text-textos leading-relaxed md:max-w-lg mt-40 md:mt-0">
+				<p class="mt-5 text-xs md:text-lg text-textos leading-relaxed md:max-w-lg md:mt-10">
 					Comercializadora especializada en los sectores de
 					transformación, refrigeración,
 					<span class="text-[#3F88A4]">
@@ -38,6 +37,10 @@ import inicio from "../../src/assets/inicio/inicio.png";
 				</a>
 				
 			</div>
+			<div class="mt-5 md:mt-0">
+				<img src={inicio.src} alt="" class="md:absolute md:right-0 md:w-280 md:top-30 object-contain "/>
+
+			</div>
 			
 		</div>
 	</section>
@@ -45,7 +48,7 @@ import inicio from "../../src/assets/inicio/inicio.png";
 	<Productos />
 	<Valores />
 	
-	<section id="contacto" class="w-5/6 mx-auto">
+	<section id="contacto" class=" mx-auto">
         <ContactForm />
     </section>
 	<Footer />

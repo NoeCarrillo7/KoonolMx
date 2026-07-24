@@ -2,91 +2,89 @@
 import logo from "../../assets/footer/logoColor.png";
 ---
 
-<section class="w-full flex justify-center py-24 relative">
-  <div class="absolute top-30 left-1/4 w-16 h-16 border border-principal/20">
-  </div>
+<section class="flex justify-center py-10 md:py-10">
 
-  <div class="">
-    <div class="text-center mb-5">
-      <h2 class="text-5xl font-medium text-principal uppercase">Contáctanos</h2>
+  <div class="w-5/6">
+    <div class="text-center md:mb-5">
+      <h2 class="md:text-5xl text-xl  font-semibold md:font-medium text-principal uppercase">Contáctanos</h2>
     </div>
     <div class="bg-[#F3FAFC] rounded-[30px] overflow-hidden shadow-2xl grid lg:grid-cols-[65%_35%]">
       <!-- FORMULARIO -->
       <div class="p-8">
-        <h3 class="text-3xl font-medium text-principal mb-3">
+        <h3 class="md:text-3xl font-medium text-principal mb-3">
           Envíanos un mensaje
         </h3>
-        <p class="text-textos mb-5">
+        <p class="text-textos mb-5 text-xs md:text-base">
           En Koonol, resolvemos el desabasto de componentes críticos y la falta
           de soporte especializado en la zona industrial.
         </p>
         <form class="space-y-2">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
-              <label class="block mb-2 text-principal font-semibold">
+              <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
                 Nombre
               </label>
               <input
                 type="text"
                 placeholder="Nombre completo"
-                class="w-full rounded-3xl border border-gray-300 px-4 py-3 focus:border-textos outline-none transition"
+                class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 focus:border-textos outline-none transition text-xs"
               />
             </div>
 
             <div>
-              <label class="block mb-2 text-principal font-semibold">
+              <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
                 Teléfono
               </label>
 
               <input
                 type="text"
                 placeholder="Número telefónico"
-                class="w-full rounded-3xl border border-gray-300 px-4 py-3 focus:border-textos outline-none transition"
+                class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 focus:border-textos outline-none transition text-xs"
               />
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-5">
             <div>
-              <label class="block mb-2 text-principal font-semibold">
+              <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
                 Empresa
               </label>
 
               <input
                 type="text"
                 placeholder="Nombre de tu empresa"
-                class="w-full rounded-3xl border border-gray-300 px-4 py-3"
+                class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 text-xs"
               />
             </div>
 
             <div>
-              <label class="block mb-2 text-principal font-semibold">
+              <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
                 Email
               </label>
 
               <input
                 type="email"
                 placeholder="Correo electrónico"
-                class="w-full rounded-3xl border border-gray-300 px-4 py-3"
+                class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 text-xs"
               />
             </div>
           </div>
 
           <div>
-            <label class="block mb-2 text-principal font-semibold">
+            <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
               Cuéntanos sobre tu proyecto
             </label>
 
             <textarea
               rows="4"
               placeholder="Escribe aquí tu mensaje..."
-              class="w-full rounded-3xl border border-gray-300 px-4 py-3 resize-none"
+              class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-3 resize-none text-xs"
             ></textarea>
           </div>
 
           <div class="flex justify-end">
             <button
-              class="bg-principal text-white px-12 py-4 rounded-full hover:bg-textos transition">
+              class="bg-principal text-white w-full py-2 md:py-3 rounded-xl md:rounded-full hover:bg-textos transition">
               Enviar
             </button>
           </div>
@@ -95,29 +93,29 @@ import logo from "../../assets/footer/logoColor.png";
 
       <!-- CONTACTO  -->
       <div class="bg-[#005674]/5 flex flex-col items-center justify-center p-5">
-        <img src={logo.src} alt="Koonol MX" class="w-50 mb-20" />
+        <img src={logo.src} alt="Koonol MX" class="w-30 md:w-50 mb-5 md:mb-20" />
         <div class="space-y-5 text-center">
-          <div class="grid grid-cols-2 gap-10 mb-10">
+          <div class="grid md:grid-cols-2 grid-cols-1 gap-5 md:gap-10 md:mb-10">
             <div>
-              <i class="fa-regular fa-envelope text-3xl text-principal mb-3"></i>
-              <h4 class="font-bold text-principal text-xl">Correo</h4>
-              <p class="text-textos">contacto@koonol.com.mx</p>
+              <i class="fa-regular fa-envelope text-xl md:text-3xl text-principal mb-3"></i>
+              <h4 class="font-semibold md:font-bold text-principal text-base md:text-xl">Correo</h4>
+              <p class="text-textos text-xs md:text-base">contacto@koonol.com.mx</p>
             </div>
 
             <div>
-              <i class="fa-solid fa-phone text-3xl text-principal mb-3"></i>
-              <h4 class="font-bold text-principal text-xl">Teléfono</h4>
-              <p class="text-textos">+52 442 454 0557</p>
+              <i class="fa-solid fa-phone text-xl md:text-3xl text-principal mb-3"></i>
+              <h4 class="font-semibold md:font-bold text-principal text-base md:text-xl">Teléfono</h4>
+              <p class="text-textos text-xs md:text-base">+52 442 454 0557</p>
             </div>
           </div>
           <div>
-            <i class="fa-solid fa-location-dot text-3xl text-principal mb-3"></i>
-            <h4 class="font-bold text-principal text-xl">Dirección</h4>
-            <p class="text-textos leading-7">
-              Camino al Cerrito N1<br />
-              Local 1A<br />
-              El Pueblito, Querétaro
-            </p>
+            <i class="fa-solid fa-location-dot text-xl md:text-3xl text-principal mb-3"></i>
+            <h4 class="font-semibold md:font-bold text-principal text-base md:text-xl">Dirección</h4>
+            <a href="https://www.google.com/maps/place/Central+Park/@20.5731754,-100.3616471,17z/data=!3m1!4b1!4m6!3m5!1s0x85d344a4aa8b0e37:0xc683699f31a60457!8m2!3d20.5731754!4d-100.3616471!16s%2Fg%2F11g18_crtt!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"  target="_blank" class="text-textos text-xs md:text-base">
+              C. Armando Birlain Shafler 2001<br> 
+              Centro Sur, 76090<br>
+              Santiago de Querétaro, Qro.
+            </a>
           </div>
         </div>
       </div>
