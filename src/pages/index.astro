@@ -6,47 +6,57 @@ import Footer from "../components/common/Footer.astro";
 import Nosotros from "../pages/inicio/Nosotros.astro";
 import Productos from "../pages/inicio/Productos.astro";
 import Valores from "../pages/inicio/Valores.astro";
+import Aliados from "../pages/inicio/Aliados.astro";
 import inicio from "../../src/assets/inicio/inicio.png";
 ---
 
 <MainLayout title="KoonolMX">
 	<Nav_bar />
-	<section class="w-full min-h-screen flex md:items-center overflow-hidden">
+	<section class="relative w-full min-h-[75vh] md:min-h-screen flex md:items-center overflow-hidden py-0 md:py-30">
 		<!-- Imagen-->
-		<img src={inicio.src} alt="" class="md:w-[65%] object-contain absolute right-0 md:top-40 top-50"/>
+		<img
+			src={inicio.src}
+			alt=""
+			class="absolute right-[-30%] top-36 w-[140%] max-w-none object-contain sm:right-[-15%] sm:w-[90%] md:right-0 md:top-40 md:w-[65%]"/>
+		<!-- Capa para movil-->
+		<div class="absolute inset-0 md:hidden bg-gradient-to-r from-[#F6FCFE] via-[#F6FCFE]/90 to-transparent"></div>
 
 		<!-- Texto -->
-		<div class="w-5/6 mx-auto mt-30">
-			<div class="md:w-[800px] flex flex-col">
-
-				<h1 class="text-xl md:text-6xl font-medium leading-tight text-principal">
+		<div class="w-5/6 mx-auto mt-28 sm:mt-36 md:mt-30 relative z-10">
+			<div class="w-[75%] sm:w-[65%] md:w-[800px] flex flex-col">
+				<h1
+					class="text-3xl md:text-6xl sm:text-4xl font-medium leading-tight text-principal"
+				>
 					Integrando equipamiento
 					<br />
 					ingenieril premium para la
 					<span class="text-[#7B97A6]"> industria global. </span>
 				</h1>
 
-				<p class="mt-8 text-xs md:text-lg text-textos leading-relaxed md:max-w-lg mt-40 md:mt-0">
+				<p
+					class="mt-5 sm:mt-20 md:mt-8 text-sm text-sm md:text-lg text-textos leading-relaxed max-w-xs sm:max-w-smmd:max-w-lg"
+				>
 					Comercializadora especializada en los sectores de
 					transformación, refrigeración,
 					<span class="text-[#3F88A4]">
 						automatización y conectividad.
 					</span>
 				</p>
-				<a href="#contacto" class=" md:w-2/6 text-center mt-5 md:mt-10 bg-principal text-white py-2 md:py-4 rounded-full shadow-xl hover:bg-[#08495d] transition-all duration-300">
+				<a
+					href="#contacto"
+					class="mt-6 md:mt-10 w-40 sm:w-48 md:w-2/6 text-center bg-principal text-white py-3 md:py-4 rounded-full shadow-xl hover:bg-[#08495d] transition-all duration-300"
+				>
 					Contáctanos
 				</a>
-				
 			</div>
-			
 		</div>
 	</section>
 	<Nosotros />
 	<Productos />
 	<Valores />
-	
+	<Aliados />
 	<section id="contacto" class="w-5/6 mx-auto">
-        <ContactForm />
-    </section>
+		<ContactForm />
+	</section>
 	<Footer />
 </MainLayout>

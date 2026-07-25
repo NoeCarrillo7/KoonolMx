@@ -3,16 +3,15 @@ import logo from "../../assets/footer/logoColor.png";
 ---
 
 <section class="w-full flex justify-center py-24 relative">
-  <div class="absolute top-30 left-1/4 w-16 h-16 border border-principal/20">
-  </div>
+
 
   <div class="">
     <div class="text-center mb-5">
-      <h2 class="text-5xl font-medium text-principal uppercase">Contáctanos</h2>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-principal uppercase">Contáctanos</h2>
     </div>
     <div class="bg-[#F3FAFC] rounded-[30px] overflow-hidden shadow-2xl grid lg:grid-cols-[65%_35%]">
       <!-- FORMULARIO -->
-      <div class="p-8">
+      <div class="p-5 sm:p-8">
         <h3 class="text-3xl font-medium text-principal mb-3">
           Envíanos un mensaje
         </h3>
@@ -94,26 +93,26 @@ import logo from "../../assets/footer/logoColor.png";
       </div>
 
       <!-- CONTACTO  -->
-      <div class="bg-[#005674]/5 flex flex-col items-center justify-center p-5">
-        <img src={logo.src} alt="Koonol MX" class="w-50 mb-20" />
-        <div class="space-y-5 text-center">
-          <div class="grid grid-cols-2 gap-10 mb-10">
+      <div class="bg-[#005674]/5 flex flex-col items-center justify-center p-4 sm:p-5">
+        <img src={logo.src} alt="Koonol MX"  class="w-32 sm:w-40 mb-8 sm:mb-16"  />
+        <div class="space-y-3 text-center">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mb-6 sm:mb-10">
             <div>
-              <i class="fa-regular fa-envelope text-3xl text-principal mb-3"></i>
-              <h4 class="font-bold text-principal text-xl">Correo</h4>
-              <p class="text-textos">contacto@koonol.com.mx</p>
+              <i class="fa-regular fa-envelope text-xl sm:text-3xl text-principal mb-2"></i>
+              <h4 class="font-bold text-principal text-base sm:text-xl">Correo</h4>
+              <p class="text-textos text-base sm:text-lg leading-7 ">contacto@koonol.com.mx</p>
             </div>
 
             <div>
-              <i class="fa-solid fa-phone text-3xl text-principal mb-3"></i>
-              <h4 class="font-bold text-principal text-xl">Teléfono</h4>
-              <p class="text-textos">+52 442 454 0557</p>
+              <i class="fa-solid fa-phone text-xl sm:text-3xl text-principal mb-2"></i>
+              <h4 class="font-bold text-principal text-base sm:text-xl">Teléfono</h4>
+              <p class="text-textos text-base sm:text-lg leading-7">+52 442 454 0557</p>
             </div>
           </div>
           <div>
-            <i class="fa-solid fa-location-dot text-3xl text-principal mb-3"></i>
-            <h4 class="font-bold text-principal text-xl">Dirección</h4>
-            <p class="text-textos leading-7">
+            <i class="fa-solid fa-location-dot text-xl sm:text-3xl text-principal mb-2"></i>
+            <h4 class="font-bold text-principal text-base sm:text-xl">Dirección</h4>
+            <p class="text-textos text-base sm:text-lg leading-7">
               Camino al Cerrito N1<br />
               Local 1A<br />
               El Pueblito, Querétaro
