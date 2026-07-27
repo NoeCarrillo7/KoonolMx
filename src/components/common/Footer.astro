@@ -4,87 +4,57 @@ import logohbl from "../../assets/footer/logoHBLmorado.png";
 ---
 
 <section class="bg-[#025971] text-white w-full">
-  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-14 lg:py-16">
+	<div class="max-w-7xl mx-auto px-8 py-16">
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+			<div class="flex justify-center md:justify-start">
+				<img src={logo.src} alt="Koonol MX" class="h-40 w-60 mb-5" />
+			</div>
+			<!-- Links -->
+			<div class="text-center md:text-start">
+				<h3 class="font-bold text-lg mb-6 uppercase tracking-wider">
+					Links
+				</h3>
+				<ul class="space-y-3 text-sm">
+					<li><a href="/" class="hover:text-gray-300">Inicio</a></li>
+					<li>
+						<a href="/nosotros" class="hover:text-gray-300"
+							>Nosotros</a
+						>
+					</li>
+					<li>
+						<a href="/productos" class="hover:text-gray-300"
+							>Productos</a
+						>
+					</li>
+					<li>
+						<a href="/contacto" class="hover:text-gray-300"
+							>Contacto</a
+						>
+					</li>
+				</ul>
+			</div>
 
-    <!-- GRID -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+			<div class="flex flex-col items-center md:items-start">
+				<h3 class="font-bold text-lg mb-0 uppercase tracking-wider">
+					Social
+				</h3>
+				<div class="flex gap-8 pt-5">
+					<a>
+						<i class="fa-brands fa-facebook-f text-2xl"></i>
+					</a>
+					<a>
+						<i class="fa-brands fa-whatsapp text-2xl"></i>
+					</a>
+					<a>
+						<i class="fa-brands fa-instagram text-2xl"></i>
+					</a>
+				</div>
+			</div>
 
-      <!-- Logo -->
-      <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
-        <img
-          src={logo.src}
-          alt="Koonol MX"
-          class="w-40 sm:w-44 lg:w-52 mb-4"
-        />
-
-        <p class="text-white/80 text-sm max-w-xs">
-          Soluciones industriales en conectividad, automatización,
-          refrigeración y sanitización profesional.
-        </p>
-      </div>
-
-      <!-- Links -->
-      <div class="text-center sm:text-left">
-        <h3 class="font-bold text-lg mb-5 uppercase tracking-wider">
-          Links
-        </h3>
-
-        <ul class="space-y-3 text-sm">
-          <li>
-            <a href="/" class="hover:text-gray-300 transition-colors">
-              Inicio
-            </a>
-          </li>
-
-          <li>
-            <a href="/nosotros" class="hover:text-gray-300 transition-colors">
-              Nosotros
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/productos/telecomunicaciones"
-              class="hover:text-gray-300 transition-colors"
-            >
-              Productos
-            </a>
-          </li>
-
-          <li>
-            <a href="/#contacto" class="hover:text-gray-300 transition-colors">
-              Contacto
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Social -->
-      <div class="text-center sm:text-left">
-        <h3 class="font-bold text-lg mb-5 uppercase tracking-wider">
-          Social
-        </h3>
-
-        <div class="flex justify-center sm:justify-start gap-6">
-          <a href="#" class="hover:scale-110 transition-transform">
-            <i class="fa-brands fa-facebook-f text-2xl"></i>
-          </a>
-
-          <a href="#" class="hover:scale-110 transition-transform">
-            <i class="fa-brands fa-whatsapp text-2xl"></i>
-          </a>
-
-          <a href="#" class="hover:scale-110 transition-transform">
-            <i class="fa-brands fa-instagram text-2xl"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Contacto -->
-      <div class="text-center sm:text-left">
-        <h3 class="font-bold text-lg mb-5 uppercase tracking-wider">
-          Contacto
-        </h3>
+			<div class="flex flex-col items-center md:items-start">
+				<h3 class="font-bold text-lg mb-6 uppercase tracking-wider">
+					Contacto
+				</h3>
 
         <div class="space-y-5 text-sm">
 

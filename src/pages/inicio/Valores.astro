@@ -5,12 +5,12 @@ import circulo2 from "../../assets/inicio/valores/circulo2.png";
 import circulo3 from "../../assets/inicio/valores/circulo3.png";
 ---
 
-<section class="w-full py-24">
+<section class="w-5/6 mx-auto py-10 md:py-25">
     <!-- Circulo derecha-->
     <img
         src={circulo2.src}
         alt=""
-        class="absolute top-905 right-0 w-60 pointer-events-none"
+        class="absolute top-750 md:top-905 right-0 w-60 pointer-events-none"
     />
     <!-- Circulo izquierda-->
     <img
@@ -25,23 +25,21 @@ import circulo3 from "../../assets/inicio/valores/circulo3.png";
         class="absolute top-1060 right-80 w-40 pointer-events-none"
     />
 
-    <div
-        class="w-11/12 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center"
-    >
-        <div class="flex justify-center">
+    <div class=" mx-auto flex flex-col-reverse md:flex-row gap-10 md:gap-20 items-center">
+        <div class="flex justify-center ">
             <img
                 src={esencia.src}
                 alt="Nuestra Esencia"
-                class="w-full max-w-[800px]"
+                class=" w-[600px]"
             />
         </div>
 
         <!-- Contenido -->
-        <div class="flex flex-col justify-between gap-35">
+        <div class="md:w-1/2 flex flex-col justify-between gap-5 md:gap-35 ">
             <!-- Misión -->
-            <div class="flex flex-col gap-2 lg:-translate-x-40">
-                <h2 class="text-4xl font-medium text-principal">Misión</h2>
-                <p class="text-textos text-lg leading-relaxed text-justify">
+            <div class="flex flex-col gap-2 md:-translate-x-40 text-center md:text-start">
+                <h2 class="md:text-4xl font-semibold text-principal">Misión</h2>
+                <p class="text-textos text-xs md:text-lg md:leading-relaxed md:text-justify">
                     Actuar como el enlace estratégico y confiable para la
                     obtención de soluciones en equipamiento y refaccionamiento
                     premium en los sectores de automatización, control,
@@ -50,10 +48,10 @@ import circulo3 from "../../assets/inicio/valores/circulo3.png";
             </div>
 
             <!-- Visión -->
-            <div class="flex flex-col gap-2 lg:-translate-x-5">
-                <h2 class="text-4xl font-medium text-principal">Visión</h2>
+            <div class="flex flex-col gap-2 lg:-translate-x-5 text-center md:text-start">
+                <h2 class="md:text-4xl font-semibold text-principal">Visión</h2>
 
-                <p class="text-textos text-lg leading-relaxed text-justify">
+                <p class="text-textos text-xs md:text-lg md:leading-relaxed md:text-justify">
                     Ser el factor diferencial en el ciclo de vida de proyectos
                     industriales, acercando tecnología de marcas premium
                     verificadas que garanticen la continuidad operativa.
@@ -61,12 +59,12 @@ import circulo3 from "../../assets/inicio/valores/circulo3.png";
             </div>
 
             <!-- Valor Central -->
-            <div class="flex flex-col gap-0 lg:-translate-x-40">
-                <h2 class="text-4xl font-medium text-principal">
+            <div class="flex flex-col gap-0 lg:-translate-x-40 text-center md:text-start">
+                <h2 class="md:text-4xl font-semibold text-principal">
                     Valor Central
                 </h2>
 
-                <p class="text-textos text-lg leading-relaxed text-justify">
+                <p class="text-textos text-xs md:text-lg md:leading-relaxed md:text-justify">
                     Calidad y Compromiso Real. Diseñamos soluciones enfocadas en
                     el beneficio común y la eficiencia técnica a largo plazo,
                     priorizando el rendimiento del ciclo de vida del equipo
