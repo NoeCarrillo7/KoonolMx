@@ -10,13 +10,25 @@ import ContactForm from '../../components/common/ContactForm.astro';
 import data from '../../data/sanitizacion.json';
 
 import hero_imagen from '../../assets/sanitizacion/hero-imagen.png'
+import validex from '../../assets/sanitizacion/validex.png'
+import winterhalter from '../../assets/sanitizacion/winterhalter.png'
+
+const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>, item, index) => {
+    if (index % 2 === 0) {
+        pairs.push([item]);
+    } else {
+        pairs[pairs.length - 1].push(item);
+    }
+    return pairs;
+}, []);
+
 ---
 
 <MainLayout title="Sanitización | Koonol MX">
     <Nav_bar />
 
 
-    <main class="w-5/6 mx-auto  py-10">
+    <main class="w-5/6 mx-auto mt-5 md:mt-30 py-10">
         
         <!-- HERO -->
         <section>
@@ -57,23 +69,28 @@ import hero_imagen from '../../assets/sanitizacion/hero-imagen.png'
                     mejorando la eficiencia del lavado y la sanitización.
                 </p>
             </div>
-
+                <!-- Aqui lo acomode y modifique el de Doubleproductcard es que has de cuenta que estaba duplicando la informacion,en un recuadro me mostraba 2 productos pero era el mismo, solo ajuste ese vale? -->
             <div class="grid grid-cols-1 gap-6">
-                {data.winterhalterProducts.map((item) => (
-                <DoubleProductCard 
-                    tag={item.tag}
-                    title={item.title}
-                    description={item.description}
-                    images={item.images}
-                />
+                {winterhalterPairs.map((pair) => (
+                    <DoubleProductCard
+                        left={pair[0]}
+                        right={pair[1]}
+                    />
                 ))}
             </div>
         </section>
 
-        <!-- BANNER MARCA 1 -->
-        <section class="bg-slate-50 rounded-2xl p-6 text-center my-10 border border-slate-100">
-        <img src="/images/brands/winterhalter.png" alt="Winterhalter" class="h-8 mx-auto mb-4 object-contain" />
-        <a href="#contacto" class="inline-block bg-[#004B6E] text-white text-xs px-6 py-2 rounded-full">Consultar ahora</a>
+        <!-- BANNER DE Winterhalter -->
+        <section class="flex flex-col items-center gap-10 md:gap-2 ">
+            <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
+                Explora la gama completa de soluciones en la web oficial de WINTERHALTER. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
+            </p>
+            <img src={winterhalter.src} alt="Winterhalter" class="md:h-20 object-contain" />
+            <a 
+                href="" target="_blank"
+                class="mt-inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
+                Consultar ahora
+            </a>
         </section>
 
         <!-- SECCIÓN VALIDEX (Tarjetas sencillas de 3 columnas) -->
@@ -90,6 +107,19 @@ import hero_imagen from '../../assets/sanitizacion/hero-imagen.png'
             ))}
         </div>
         </section>
+        <!-- BANNER DE VALIDEX -->
+        <section class="flex flex-col items-center gap-5 md:gap-2 ">
+            <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
+                Explora la gama completa de soluciones en la web oficial de VALIDEX. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
+            </p>
+            <img src={validex.src} alt="Validex" class="md:h-30 object-contain" />
+            <a 
+                href="" target="_blank"
+                class="inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
+                Consultar ahora
+            </a>
+        </section>
+        
     </main>
 
     <!-- Contacto -->

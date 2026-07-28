@@ -5,46 +5,56 @@ import circulo from "../../assets/inicio/aliados/circulo.png";
 import recuadros from "../../assets/inicio/aliados/recuadros.png";
 ---
 
-<section class="w-full mt-10 overflow-hidden">
-     <!-- Circulo Centro izquierda-->
-    <img
-        src={circulo.src}
-        alt=""
-        class="absolute top-1190 right-150 w-80 pointer-events-none"
-    />
-    <!-- Recuadros izquierda-->
-    <img
-        src={recuadros.src}
-        alt=""
-        class="absolute top-1220  left-0 w-20 pointer-events-none"
-    />
-  <div class="relative w-5/6 mx-auto h-[500px]">
+<section class="w-full py-0 mt-10 md:py-24 overflow-hidden relative">
+
+  <!-- Círculo -->
+  <img
+    src={circulo.src}
+    alt=""
+    class="hidden md:block absolute top-1190 right-150 w-80 pointer-events-none"
+  />
+
+  <!-- Recuadros -->
+  <img
+    src={recuadros.src}
+    alt=""
+    class="hidden md:block absolute top-1220 left-0 w-20 pointer-events-none"
+  />
+
+  <div class="w-5/6 mx-auto flex flex-col md:block md:relative md:h-[500px]">
 
     <!-- Texto -->
-    <div class="absolute top-0 left-0 z-20 w-full lg:w-[38%]">
-      <h2 class="text-4xl font-medium text-principal mb-5">
+    <div class="w-full md:absolute md:top-0 md:left-0 md:z-20 md:w-[38%]">
+
+      <h2 class="text-2xl md:text-4xl font-semibold text-principal mb-5 text-center md:text-left">
         Aliados tecnológicos
       </h2>
 
-      <p class="text-textos text-lg leading-relaxed text-justify">
+      <p class="text-textos text-xs md:text-lg text-center md:text-justify">
         Trabajamos con fabricantes líderes a nivel mundial para ofrecer
         soluciones industriales confiables. Porque la confiabilidad no se
         presume; se respalda con conocimiento desde la fuente.
       </p>
+
     </div>
 
-    <!-- Mapa -->
-    <img
-      src={mapa.src}
-      alt="Mapa Europa"
-      class="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[70%] max-w-none object-contain select-none pointer-events-none"
-    />
+    <!-- Contenedor de Mapa y Logo -->
+    <div class="relative w-full h-[260px] mt-10 md:mt-0 md:h-full">
 
-    <!-- Logo Teltonika -->
-    <img
-      src={teltonika.src}
-      alt="Teltonika"
-      class="absolute top-1/2 left-[45%] -translate-x-1/2 -translate-y-1/2 w-[45%] z-30"
-    />
+      <!-- Mapa -->
+      <img
+        src={mapa.src}
+        alt="Mapa"
+        class="absolute inset-0 m-auto w-full md:w-[70%] md:right-[-10%] object-contain pointer-events-none"
+      />
+
+      <!-- Logo -->
+      <img
+        src={teltonika.src}
+        alt="Teltonika"
+        class="absolute top-1/2 left-1/2 md:left-[45%] -translate-x-1/2 -translate-y-1/2 w-3/4 md:w-[45%] z-30"
+      />
+
+    </div>
   </div>
 </section>
