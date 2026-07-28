@@ -9,19 +9,37 @@
         "id": "lavavajillas-mtr",
         "tag": "Lavado Profesional",
         "title": "Lavavajillas MTR",
-        "description": "Lavavajillas de cinta transportadora de alto rendimiento diseñado para la limpieza eficiente de volúmenes elevados de vajilla en cocinas industriales.",
+        "description": "Lavavajillas industriales modulares diseñados para adaptarse al crecimiento de tu operación. Su arquitectura flexible permite personalizar, ampliar o reequipar el sistema según las necesidades de cada proyecto, ofreciendo una solución escalable y una inversión a largo plazo.",
         "images": [
-            "/images/products/mtr-1.png",
-            "/images/products/mtr-2.png"
+            "/assets/sanitizacion/LavavajillasMTR.png"
+        ]
+        },
+        {
+        "id": "lavavajillas-mtf",
+        "tag": "Lavado de alto volumen",
+        "title": "Lavavajillas MTF",
+        "description": "Lavavajillas industriales de arrastre de cestas con diseño modular, configurables según las necesidades de cada operación. Su arquitectura flexible permite ampliar o adaptar el sistema conforme crece tu negocio, garantizando una solución escalable y una inversión segura a largo plazo.",
+        "images": [
+            "/assets/sanitizacion/LavavajillasMTF.png"
+        ]
+        },
+        
+        {
+        "id": "quimicos-abrillantadores",
+        "tag": "Químicos Industriales",
+        "title": "Detergentes y Abrillantadores",
+        "description": "Detergentes y abrillantadores para lavavajillas industriales. Adaptados específicamente a sus necesidades. Altamente eficaces y de consumo reducido. Para una calidad del lavado e higiene óptima, así como una limpieza del máximo nivel.",
+        "images": [
+            "/assets/sanitizacion/detergentes.png"
         ]
         },
         {
         "id": "quimicos-dosificacion",
-        "tag": "Químicos y Equipos",
-        "title": "Detergentes y Abrillantadores",
-        "description": "Formulados específicamente para garantizar resultados impecables y proteger el equipo.",
+        "tag": "Químicos Industriales",
+        "title": "Técnica De Dosificación",
+        "description": "Los productos químicos correctos. En la cantidad exacta. Determinada en función de todos los factores relevantes. Esto es lo que garantiza la técnica de dosificación de Winterhalter. Para unos resultados de lavado siempre perfectos.",
         "images": [
-            "/images/products/detergentes-group.png"
+            "/assets/sanitizacion/dosificacion.png"
         ]
         }
     ],
@@ -30,8 +48,23 @@
         "id": "transportadora-horizontal",
         "tag": "Soluciones Validex",
         "title": "Transportadoras Horizontales",
-        "description": "Sistemas automatizados de transporte horizontal para manejo de charolas y vajilla.",
-        "image": "/images/products/validex-horizontal.png"
+        "description": "Cintas transportadoras diseñadas para trasladar bandejas de forma eficiente desde el comedor hasta la zona de lavado. Su diseño modular y personalizable permite adaptarse a diferentes espacios y necesidades operativas.",
+        "image": "/assets/sanitizacion/horizontal.png"
+        },
+        {
+        "id": "transportadora-cinta",
+        "tag": "Soluciones Validex",
+        "title": "Transportadoras de Cinta",
+        "description": "Bandas transportadoras para líneas de lavado industrial que optimizan el flujo de trabajo, mejoran la seguridad operativa y se integran fácilmente con diferentes sistemas de lavado profesional.",
+        "image": "/assets/sanitizacion/cinta.png"
+        }
+        ,
+        {
+        "id": "transportadora-vertical",
+        "tag": "Soluciones Validex",
+        "title": "Transportadoras Verticales",
+        "description": "Elevadores y descendedores automáticos diseñados para conectar comedores o áreas de servicio en diferentes plantas con la zona de lavado central. Maximizan el espacio útil y eliminan el tránsito de carros por los pasillos.",
+        "image": "/assets/sanitizacion/vertical.png"
         }
     ]
 }
