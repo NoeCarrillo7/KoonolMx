@@ -33,15 +33,15 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
         <!-- HERO -->
         <section>
             <div class="flex flex-col items-center md:items-start">
-                <span class="w-full text-center md:text-start text-sm md:text-xl font-semibold text-principal">Soluciones de</span>
-                <h1 class="text-5xl md:text-[17rem] font-semibold text-[#D7E6EB] tracking-tight leading-[0.75] ">SANITIZA</h1>
-                <p class="w-full text-center md:text-end text-sm md:text-3xl font-semibold text-principal">y Lavado Profesional</p>
+                <span class="animar fadeLeft w-full text-center md:text-start text-sm md:text-xl font-semibold text-principal">Soluciones de</span>
+                <h1 class="animar zoomBig text-5xl md:text-[17rem] font-semibold text-[#D7E6EB] tracking-tight leading-[0.75] ">SANITIZA</h1>
+                <p class="animar fadeRight w-full text-center md:text-end text-sm md:text-3xl font-semibold text-principal">y Lavado Profesional</p>
             </div>
 
             <div class="flex flex-col justify-between items-center md:gap-15 md:flex-row mt-5 md:mt-0">
                 <div class="md:h-50 md:border-l-2 border-gray-300 flex flex-col items-center text-center md:pl-5 md:items-start">
                     <!--Descripcion categoria -->
-                    <p class="text-textos text-xs md:text-lg font-medium text-center mb-6 md:text-start">
+                    <p class="animar fadeLeft text-textos text-xs md:text-lg font-medium text-center mb-6 md:text-start">
                     {data.description}
                     </p>
 
@@ -49,12 +49,12 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
                     
                     <a
                         href="#contacto"
-                        class="w-1/2 text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium py-3 rounded-full hover:bg-slate-800 transition-colors"
+                        class="animar diagonalLeft w-1/2 text-sm md:text-base text-center shadow-xl/20 bg-principal text-white font-medium py-3 rounded-full hover:bg-slate-800 transition-colors"
                         >
                         Contactanos
                     </a>
                 </div>
-                <img src={hero_imagen.src} alt="Telecom Hardware" class="w-full mt-5 md:w-1/2 md:mt-0" />
+                <img src={hero_imagen.src} alt="Telecom Hardware" class="animar zoom w-full mt-5 md:w-1/2 md:mt-0" />
             </div>
         </section>
 
@@ -62,7 +62,7 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
         <CategoryNav active={data.activeCategory as any} />
 
         <section class="my-12">
-            <div class="mb-8">
+            <div class="mb-8 animar fadeLeft">
                 <h2 class="text-xl md:text-4xl font-semibold text-principal">Productos WINTERHALTER</h2>
                 <p class="text-xs md:text-base text-textos mt-4">
                     Soluciones especializadas para mantener altos estándares de higiene en cocinas industriales y procesos de producción, 
@@ -70,7 +70,7 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
                 </p>
             </div>
                 <!-- Aqui lo acomode y modifique el de Doubleproductcard es que has de cuenta que estaba duplicando la informacion,en un recuadro me mostraba 2 productos pero era el mismo, solo ajuste ese vale? -->
-            <div class="grid grid-cols-1 gap-6">
+            <div class="animar zoom grid grid-cols-1 gap-6">
                 {winterhalterPairs.map((pair) => (
                     <DoubleProductCard
                         left={pair[0]}
@@ -82,20 +82,20 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
 
         <!-- BANNER DE Winterhalter -->
         <section class="flex flex-col items-center gap-10 md:gap-2 ">
-            <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
+            <p class="animar fadeDown text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
                 Explora la gama completa de soluciones en la web oficial de WINTERHALTER. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
             </p>
-            <img src={winterhalter.src} alt="Winterhalter" class="md:h-20 object-contain" />
+            <img src={winterhalter.src} alt="Winterhalter" class="animar zoom md:h-20 object-contain" />
             <a 
                 href="" target="_blank"
-                class="mt-inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
+                class="animar hoverZoom mt-inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
                 Consultar ahora
             </a>
         </section>
 
         <!-- SECCIÓN VALIDEX (Tarjetas sencillas de 3 columnas) -->
         <section class="my-12">
-        <h2 class="text-2xl font-bold text-slate-800 mb-6">Soluciones VALIDEX</h2>
+        <h2 class="animar expandX text-2xl font-bold text-slate-800 mb-6">Soluciones VALIDEX</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {data.validexProducts.map((item) => (
             <ProductCard 
@@ -108,14 +108,14 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
         </div>
         </section>
         <!-- BANNER DE VALIDEX -->
-        <section class="flex flex-col items-center gap-5 md:gap-2 ">
+        <section class="animar fadeUp flex flex-col items-center gap-5 md:gap-2 ">
             <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
                 Explora la gama completa de soluciones en la web oficial de VALIDEX. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
             </p>
-            <img src={validex.src} alt="Validex" class="md:h-30 object-contain" />
+            <img src={validex.src} alt="Validex" class="animar zoom md:h-30 object-contain" />
             <a 
                 href="" target="_blank"
-                class="inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
+                class="animar hoverZoom inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
                 Consultar ahora
             </a>
         </section>

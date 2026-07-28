@@ -1,1 +1,351 @@
 @import "tailwindcss";
+
+/* Chrome, Edge y Safari */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Internet Explorer y Edge antiguo */
+body {
+  -ms-overflow-style: none;
+} 
+/* ANIMACIONES */
+/* EN ESTE CASO SOLO MANDAS LLAMAR EN CLASS LA ANIMACION ejeemplo class"zoom animar") la agregas asi ya que en el */
+/* MainLayout.astro ya esta el script que hace que funcionen las animaciones esto con el fin de reducir codigo y  */
+/* reciclar animaciones, pondre todas las que se puedan y tu agregas las que mas te gusten dependiendo la seccion  */
+/* teniendo en cuenta que se animara la seccion cada que se muestre en pantalla NO SOLO 1 VEZ*/
+
+/* ANIMACION QUE BAJA */
+.bajar{  opacity:0; } .bajar.visible{ animation:bajar .9s ease-out forwards; } @keyframes bajar{from{ opacity:0; transform:translateY(-40px);}to{ opacity:1;  transform:translateY(0); } }
+
+/* Animacion que sube */
+.subir{ opacity:0; } .subir.visible{animation:subir 1s ease forwards; animation-delay:.5s;} @keyframes subir{  from{opacity:0;transform:translateY(25px);} to{ opacity:1; transform:translateY(0);}}
+
+/* ANIMACION QUE HACE QUE APAREZCAN POR 1 TRAS OTRO*/
+.logoAnim{ opacity:0; } .logoAnim.visible{animation:logo .8s ease forwards; }.logoAnim:nth-child(1){animation-delay:.1s;}.logoAnim:nth-child(2){animation-delay:.25s;}.logoAnim:nth-child(3){animation-delay:.4s;}.logoAnim:nth-child(4){animation-delay:.55s;}.logoAnim:nth-child(5){animation-delay:.7s;} @keyframes logo{ from{ opacity:0; transform:translateY(25px);} to{opacity:1; transform:translateY(0);}}
+
+/* Delays -> Tiempo que se tarda en aparecer la animación.
+   -Agrega la velocidad junto con la animación.
+   -Ejemplo:
+      class="fadeUp animar delay-1"
+
+   -La clase "animar" es obligatoria para que la animación
+   se ejecute al aparecer en pantalla.
+*/ 
+.delay-1{animation-delay:.1s!important}
+.delay-2{animation-delay:.2s!important}
+.delay-3{animation-delay:.3s!important}
+.delay-4{animation-delay:.4s!important}
+.delay-5{animation-delay:.5s!important}
+.delay-6{animation-delay:.6s!important}
+.delay-7{animation-delay:.7s!important}
+.delay-8{animation-delay:.8s!important}
+.delay-9{animation-delay:.9s!important}
+.delay-10{animation-delay:1s!important}
+
+
+/* Duración de la animación.
+   -Agrega la velocidad junto con la animación.
+   -Ejemplo:
+      class="fadeUp animar slow"
+
+*/
+.fast{animation-duration:.5s!important}
+.normal{animation-duration:.8s!important}
+.slow{animation-duration:1.2s!important}
+
+
+/* Animaciones Basicas que aparecen ya se de arriba, abajo,derecha izquierda, de zoom dezlizantes que se giran ligeramente
+  las de flip como que giran como tarjetas, solo copia y pegala y checa que hace jajaj etc.. */
+.fade,.fadeUp,.fadeDown,.fadeLeft,.fadeRight,
+.zoom,.zoomBig,.zoomRotate,
+.slideLeft,.slideRight,.slideTop,.slideBottom,
+.flipX,.flipY,.blur,.bounce,.rotate,.scale,.wave,.stagger{
+opacity:0;
+}
+
+/* ANIMACIONES INFINITAS  solo copia la primer palabra despues del punto nop*/
+.float{animation:float 4s ease-in-out infinite} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.pulse{animation:pulse 2s infinite} @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.heartbeat{animation:heartbeat 3s infinite} @keyframes heartbeat{0%,100%{transform:scale(1)}20%{transform:scale(1.08)}40%{transform:scale(.98)}60%{transform:scale(1.08)}}
+.rotate.visible{animation:rotateIn .8s forwards} @keyframes rotateIn{from{opacity:0;transform:rotate(-180deg) scale(.8)}to{opacity:1;transform:none}}
+.scale.visible{animation:scaleIn .7s forwards} @keyframes scaleIn{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+.wave.visible{transform-origin:bottom center;animation:waveIn .9s forwards} @keyframes waveIn{ 0%{opacity:0;transform:rotate(-8deg)}50%{opacity:1;transform:rotate(4deg)} 100%{opacity:1;transform:rotate(0)}}
+.stagger.visible{animation:fadeUp .8s forwards}
+
+/* ANIMACION COMO EN FORMA DE ZOOM EN CUADRADO ->  cardHover animar */
+.cardHover{ transition:.35s;}
+.cardHover:hover{ transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,.15);}
+
+/* ANIMACION DE BOTONES al poner el cursor parece como que brilla -> buttonGlow animar */
+.buttonGlow{ position:relative; overflow:hidden;}
+.buttonGlow::before{ content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:rgba(255,255,255,.35);transform:skewX(-25deg);transition:.7s;}
+.buttonGlow:hover::before{left:150%}
+
+/* ANIMACION DE BOTONES al poner el cursor parece como que brilla  parecida a la de arriba -> buttonGlow animar */ 
+.shine{position:relative;overflow:hidden;}
+.shine::after{content:"";position:absolute;top:0;left:-150%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-25deg);}
+.shine:hover::after{left:180%;transition:.8s;}
+
+.rotateZoom{
+opacity:0;
+}
+
+.rotateZoom.visible{
+animation:rotateZoom 1s forwards;
+}
+
+@keyframes rotateZoom{
+
+from{
+opacity:0;
+transform:rotate(-360deg) scale(.2);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+.diagonalLeft{
+opacity:0;
+}
+
+.diagonalLeft.visible{
+animation:diagonalLeft .8s forwards;
+}
+
+@keyframes diagonalLeft{
+
+from{
+opacity:0;
+transform:translate(-80px,80px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+.diagonalRight{
+opacity:0;
+}
+
+.diagonalRight.visible{
+animation:diagonalRight .8s forwards;
+}
+
+@keyframes diagonalRight{
+
+from{
+opacity:0;
+transform:translate(80px,-80px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+.flipRotate{
+opacity:0;
+}
+
+.flipRotate.visible{
+animation:flipRotate 1s forwards;
+}
+
+@keyframes flipRotate{
+
+from{
+opacity:0;
+transform:perspective(900px) rotateY(180deg);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+.pop{
+opacity:0;
+}
+
+.pop.visible{
+animation:pop .7s forwards;
+}
+
+@keyframes pop{
+
+0%{
+opacity:0;
+transform:scale(.2);
+}
+
+70%{
+opacity:1;
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+.expandX{
+opacity:0;
+transform:scaleX(.2);
+transform-origin:left;
+}
+
+.expandX.visible{
+animation:expandX .8s forwards;
+}
+
+@keyframes expandX{
+
+from{
+opacity:0;
+transform:scaleX(.2);
+}
+
+to{
+opacity:1;
+transform:scaleX(1);
+}
+
+}
+.expandY{
+opacity:0;
+transform:scaleY(.2);
+transform-origin:top;
+}
+
+.expandY.visible{
+animation:expandY .8s forwards;
+}
+
+@keyframes expandY{
+
+from{
+opacity:0;
+transform:scaleY(.2);
+}
+
+to{
+opacity:1;
+transform:scaleY(1);
+}
+
+}
+.typewriter{
+overflow:hidden;
+white-space:nowrap;
+width:0;
+}
+
+.typewriter.visible{
+animation:typewriter 2s steps(40,end) forwards;
+}
+
+@keyframes typewriter{
+
+from{
+width:0;
+}
+
+to{
+width:100%;
+}
+
+}
+
+.hoverFloat{
+transition:.4s;
+}
+
+.hoverFloat:hover{
+transform:translateY(-15px);
+}
+
+.hoverRotate{
+transition:.35s;
+}
+
+.hoverRotate:hover{
+transform:rotate(5deg);
+}
+
+.hoverZoom{
+transition:.4s;
+}
+
+.hoverZoom:hover{
+transform:scale(1.08);
+}
+
+.hover3D{
+transition:.4s;
+transform-style:preserve-3d;
+}
+
+.hover3D:hover{
+transform:rotateX(10deg) rotateY(-10deg);
+}
+
+.hoverLift{
+transition:.35s;
+}
+
+.hoverLift:hover{
+transform:translateY(-12px);
+box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+
+
+
+/* ESTAS ANIMACIONES SON LAS DE ARRIBA O SEA SU FUNCION SOLO USA LAS DE ARRIBA SON LAS MISMAS*/
+.fade.visible{animation:fade .8s forwards} @keyframes fade{from{opacity:0}to{opacity:1}}
+/* Fade Up */
+.fadeUp.visible{animation:fadeUp .8s ease forwards} @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+/* Fade Down */
+.fadeDown.visible{animation:fadeDown .8s ease forwards} @keyframes fadeDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
+/* Fade Left */
+.fadeLeft.visible{animation:fadeLeft .8s ease forwards} @keyframes fadeLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+/* Fade Right */
+.fadeRight.visible{animation:fadeRight .8s ease forwards} @keyframes fadeRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:none}}
+
+/* Zoom */
+.zoom.visible{animation:zoom .8s forwards} @keyframes zoom{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.zoomBig.visible{animation:zoomBig 1s forwards} @keyframes zoomBig{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+.zoomRotate.visible{animation:zoomRotate .9s forwards} @keyframes zoomRotate{from{opacity:0;transform:scale(.8) rotate(-8deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+
+/* Slides */
+.slideLeft.visible{animation:slideLeft .8s forwards}@keyframes slideLeft{from{opacity:0;transform:translateX(-120px)}to{opacity:1;transform:none}}
+.slideRight.visible{animation:slideRight .8s forwards}@keyframes slideRight{from{opacity:0;transform:translateX(120px)}to{opacity:1;transform:none}}
+.slideTop.visible{animation:slideTop .8s forwards}@keyframes slideTop{from{opacity:0;transform:translateY(-120px)}to{opacity:1;transform:none}}
+.slideBottom.visible{animation:slideBottom .8s forwards}@keyframes slideBottom{from{opacity:0;transform:translateY(120px)}to{opacity:1;transform:none}}
+
+/* Flip */
+.flipX.visible{animation:flipX .9s forwards} @keyframes flipX{from{opacity:0;transform:perspective(600px) rotateX(90deg)}to{opacity:1;transform:none}}
+.flipY.visible{animation:flipY .9s forwards} @keyframes flipY{from{opacity:0;transform:perspective(600px) rotateY(90deg)}to{opacity:1;transform:none}}
+
+/* Blur */
+.blur.visible{animation:blurIn .8s forwards} @keyframes blurIn{from{opacity:0;filter:blur(10px)}to{opacity:1;filter:blur(0)}}
+
+/* Bounce */
+.bounce.visible{animation:bounceIn .9s forwards} @keyframes bounceIn{ 0%{opacity:0;transform:translateY(80px)} 70%{transform:translateY(-10px)} 100%{opacity:1;transform:none}}
