@@ -6,6 +6,8 @@ import CategoryNav from '../../components/category/CategoryNav.astro';
 import ProductCard from '../../components/category/ProductCard.astro';
 import DoubleProductCard from '../../components/category/DoubleProductCard.astro';
 import ContactForm from '../../components/common/ContactForm.astro';
+import Footer from "../../components/common/Footer.astro";
+
 
 import data from '../../data/sanitizacion.json';
 
@@ -81,13 +83,13 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
         </section>
 
         <!-- BANNER DE Winterhalter -->
-        <section class="flex flex-col items-center gap-10 md:gap-2 ">
+        <section class="flex flex-col items-center gap-10 md:gap-15 ">
             <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
                 Explora la gama completa de soluciones en la web oficial de WINTERHALTER. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
             </p>
-            <img src={winterhalter.src} alt="Winterhalter" class="md:h-20 object-contain" />
+            <img src={winterhalter.src} alt="Winterhalter" class="md:h-30 object-contain" />
             <a 
-                href="" target="_blank"
+                href="https://www.winterhalter.com/mx-es/" target="_blank"
                 class="mt-inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
                 Consultar ahora
             </a>
@@ -95,7 +97,7 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
 
         <!-- SECCIÓN VALIDEX (Tarjetas sencillas de 3 columnas) -->
         <section class="my-12">
-        <h2 class="text-2xl font-bold text-slate-800 mb-6">Soluciones VALIDEX</h2>
+        <h2 class="text-xl md:text-4xl font-semibold text-principal mb-10">Soluciones VALIDEX</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {data.validexProducts.map((item) => (
             <ProductCard 
@@ -108,13 +110,13 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
         </div>
         </section>
         <!-- BANNER DE VALIDEX -->
-        <section class="flex flex-col items-center gap-5 md:gap-2 ">
+        <section class="flex flex-col items-center gap-10 md:gap-15 ">
             <p class="text-textos text-xs md:text-base text-justify md:text-center md:w-4/5 ">
                 Explora la gama completa de soluciones en la web oficial de VALIDEX. Elige tus equipos y regresa a nuestra sección de contacto para solicitar tu presupuesto personalizado
             </p>
             <img src={validex.src} alt="Validex" class="md:h-30 object-contain" />
             <a 
-                href="" target="_blank"
+                href="https://validex.fr/es/" target="_blank"
                 class="inline-block bg-principal text-white text-sm font-medium px-6 py-2.5 rounded-full">
                 Consultar ahora
             </a>
@@ -123,7 +125,8 @@ const winterhalterPairs = data.winterhalterProducts.reduce((pairs: Array<any[]>,
     </main>
 
     <!-- Contacto -->
-    <section id="contacto" class="my-16">
+    <section id="contacto" class="">
         <ContactForm />
     </section>
+    <Footer/>
 </MainLayout>

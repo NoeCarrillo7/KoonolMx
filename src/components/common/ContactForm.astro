@@ -18,7 +18,10 @@ import logo from "../../assets/footer/logoColor.png";
           En Koonol, resolvemos el desabasto de componentes críticos y la falta
           de soporte especializado en la zona industrial.
         </p>
-        <form class="space-y-2">
+
+
+
+        <form id="contactForm" class="space-y-2">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="block mb-2 text-principal font-semibold text-sm md:text-base">
@@ -26,6 +29,9 @@ import logo from "../../assets/footer/logoColor.png";
               </label>
               <input
                 type="text"
+                id="nombre"
+                name="nombre"
+                required
                 placeholder="Nombre completo"
                 class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 focus:border-textos outline-none transition text-xs"
               />
@@ -38,6 +44,8 @@ import logo from "../../assets/footer/logoColor.png";
 
               <input
                 type="text"
+                id="telefono"
+                name="telefono"
                 placeholder="Número telefónico"
                 class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 focus:border-textos outline-none transition text-xs"
               />
@@ -52,6 +60,9 @@ import logo from "../../assets/footer/logoColor.png";
 
               <input
                 type="text"
+                id="empresa"
+                name="empresa"
+                required
                 placeholder="Nombre de tu empresa"
                 class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 text-xs"
               />
@@ -64,6 +75,9 @@ import logo from "../../assets/footer/logoColor.png";
 
               <input
                 type="email"
+                id="correo"
+                name="correo"
+                required
                 placeholder="Correo electrónico"
                 class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-2 md:py-3 text-xs"
               />
@@ -77,6 +91,9 @@ import logo from "../../assets/footer/logoColor.png";
 
             <textarea
               rows="4"
+              id="mensaje"
+              name="mensaje"
+              required
               placeholder="Escribe aquí tu mensaje..."
               class="w-full md:rounded-3xl rounded-xl border border-gray-300 px-4 py-3 resize-none text-xs"
             ></textarea>
@@ -84,13 +101,20 @@ import logo from "../../assets/footer/logoColor.png";
 
           <div class="flex justify-end">
             <button
-              class="bg-principal text-white w-full py-2 md:py-3 rounded-xl md:rounded-full hover:bg-textos transition">
+              type="submit"
+              class="bg-principal text-white w-full py-2 md:py-3 rounded-xl md:rounded-full hover:bg-textos hover:cursor-pointer transition">
               Enviar
             </button>
           </div>
-        </form>
-      </div>
+          <p id="formResponse" class="text-center text-sm font-semibold hidden py-2"></p>
 
+        </form>
+
+
+
+
+
+      </div>
       <!-- CONTACTO  -->
       <div class="bg-[#005674]/5 flex flex-col items-center justify-center p-5">
         <img src={logo.src} alt="Koonol MX" class="w-30 md:w-50 mb-5 md:mb-20" />
@@ -122,3 +146,83 @@ import logo from "../../assets/footer/logoColor.png";
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const responseMessage = document.getElementById('formResponse');
+
+  if (!form) {
+    console.error('Error: No se encontró el formulario con id "contactForm"');
+  } else {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      console.log('Formulario enviado: Iniciando proceso...');
+
+      const nombreInput = document.getElementById('nombre') as HTMLInputElement | null;
+      const telefonoInput = document.getElementById('telefono') as HTMLInputElement | null;
+      const empresaInput = document.getElementById('empresa') as HTMLInputElement | null;
+      const correoInput = document.getElementById('correo') as HTMLInputElement | null;
+      const mensajeInput = document.getElementById('mensaje') as HTMLTextAreaElement | null;
+
+      if (!nombreInput || !correoInput || !mensajeInput) {
+        console.error('Error: Faltan campos en el HTML (id "nombre", "correo" o "mensaje")');
+        return;
+      }
+
+      const formData = {
+        nombre: nombreInput.value,
+        telefono: telefonoInput ? telefonoInput.value : '',
+        empresa: empresaInput ? empresaInput.value : '',
+        correo: correoInput.value,
+        mensaje: mensajeInput.value,
+      };
+
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (submitBtn) submitBtn.disabled = true;
+
+      if (responseMessage) {
+        responseMessage.classList.remove('hidden');
+        responseMessage.style.color = '#005671';
+        responseMessage.textContent = 'Enviando información...';
+      }
+
+      try {
+        const response = await fetch('/enviar.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (responseMessage) {
+          if (response.ok && result.status === 'success') {
+            responseMessage.style.color = '#22c55e';
+            responseMessage.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> ¡Mensaje recibido con éxito!`;
+            form.reset();
+          } else {
+            responseMessage.style.color = '#ef4444';
+            responseMessage.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2"></i> ${result.message || 'Error al enviar.'}`;
+          }
+        }
+      } catch (error) {
+        console.error('Error en fetch:', error);
+        if (responseMessage) {
+          responseMessage.style.color = '#ef4444';
+          responseMessage.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2"></i> Hubo un error de conexión.`;
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+  }
+</script>

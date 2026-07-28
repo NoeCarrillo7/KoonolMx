@@ -4,6 +4,7 @@ import Nav_bar from "../../components/common/Navbar.astro";
 import CategoryNav from "../../components/category/CategoryNav.astro";
 import ProductCard from "../../components/category/ProductCard.astro";
 import ContactForm from "../../components/common/ContactForm.astro";
+import Footer from "../../components/common/Footer.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 import data from "../../data/refrigeracion.json";
@@ -231,7 +232,7 @@ import elemento1 from "../../assets/elementos.png";
                     e industrial, somos distribuidores autorizados de UNOX,
                     líderes mundiales en hornos combinados inteligentes.
                 </p>
-                <a href="" class="bg-white text-principal font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition-colors" >
+                <a href="https://www.unox.com/es_mx/" target="_blank" class="bg-white text-principal font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition-colors" >
                     Explora tecnología UNOX
                 </a>
             </div>
@@ -242,4 +243,6 @@ import elemento1 from "../../assets/elementos.png";
     <section id="contacto">
         <ContactForm />
     </section>
+
+    <Footer/>
 </MainLayout>
